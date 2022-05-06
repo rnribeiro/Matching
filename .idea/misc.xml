@@ -5,6 +5,11 @@
       <map>
         <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_login.xml" value="0.22327898550724637" />
         <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_main.xml" value="0.22327898550724637" />
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_tabs.xml" value="0.1" />
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/fragment_find.xml" value="0.20199275362318841" />
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/fragment_rent.xml" value="0.20199275362318841" />
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/fragment_tabs.xml" value="0.1" />
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/fragment_tournament.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>
