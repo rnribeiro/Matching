@@ -5,19 +5,19 @@ public class Field {
     private String name;
     private int image;
     private String sport;
-    private String match_type;
+    private String matching_type;
     private int capacity;
     private int available_capacity;
     private boolean available;
     private static int i=0;
 
-    public Field(String name, int image, String sport, String match_type, int capacity, int available_capacity, boolean available) {
+    public Field(String name, int image, String sport, String matching_type, int capacity, int available_capacity, boolean available) {
         setId(i);
         i++;
         this.name = name;
         this.image = image;
         this.sport = sport;
-        this.match_type = match_type;
+        this.matching_type = matching_type;
         this.capacity = capacity;
         this.available_capacity = available_capacity;
         this.available = available;
@@ -55,12 +55,12 @@ public class Field {
         this.sport = sport;
     }
 
-    public String getMatch_type() {
-        return match_type;
+    public String getMatching_type() {
+        return matching_type;
     }
 
-    public void setMatch_type(String match_type) {
-        this.match_type = match_type;
+    public void setMatching_type(String matching_type) {
+        this.matching_type = matching_type;
     }
 
     public int getCapacity() {

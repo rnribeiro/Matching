@@ -6,10 +6,7 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import com.example.matching.FindFragment;
 import com.example.matching.R;
-import com.example.matching.RentFragment;
-import com.example.matching.TournamentFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -35,16 +32,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
 
-        switch (position){
-            case 0:
-                return new RentFragment();
-            case 1:
-                return new FindFragment();
-            case 2:
-                return new TournamentFragment();
-            default:
+
                 return PlaceholderFragment.newInstance(position+1);
-        }
     }
 
     @Nullable
