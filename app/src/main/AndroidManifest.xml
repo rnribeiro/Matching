@@ -10,9 +10,6 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Matching">
         <activity
-                android:name=".RentActivity"
-                android:exported="true"/>
-        <activity
                 android:name=".LoginActivity"
                 android:exported="true"/>
         <activity

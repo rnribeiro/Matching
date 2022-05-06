@@ -15,7 +15,7 @@
     <Button
             android:text="Login"
             android:layout_width="190dp"
-            android:layout_height="55dp" android:id="@+id/do_login_btn"
+            android:layout_height="55dp" android:id="@+id/go_to_login_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:textAlignment="center"
             android:gravity="center|center_horizontal"
@@ -48,7 +48,7 @@
             android:ems="10"
             android:id="@+id/password_input"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/do_login_btn"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/go_to_login_btn"
             app:layout_constraintTop_toBottomOf="@+id/logo_img" app:layout_constraintVertical_bias="0.815"/>
     <TextView
             android:text="Password"
