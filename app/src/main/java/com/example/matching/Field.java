@@ -4,27 +4,20 @@ public class Field {
     private int id;
     private String name;
     private int image;
-
     private String sport;
-
-    private String status;
-
+    private String match_type;
     private int capacity;
-
     private int available_capacity;
-
     private boolean available;
     private static int i=0;
 
-
-
-    public Field(String name, int image, String sport, String status, int capacity, int available_capacity, boolean available) {
-        this.id = i;
+    public Field(String name, int image, String sport, String match_type, int capacity, int available_capacity, boolean available) {
+        setId(i);
         i++;
         this.name = name;
         this.image = image;
         this.sport = sport;
-        this.status = status;
+        this.match_type = match_type;
         this.capacity = capacity;
         this.available_capacity = available_capacity;
         this.available = available;
@@ -62,12 +55,12 @@ public class Field {
         this.sport = sport;
     }
 
-    public String getStatus() {
-        return status;
+    public String getMatch_type() {
+        return match_type;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setMatch_type(String match_type) {
+        this.match_type = match_type;
     }
 
     public int getCapacity() {
@@ -93,6 +86,4 @@ public class Field {
     public void setAvailable(boolean available) {
         this.available = available;
     }
-
-
 }

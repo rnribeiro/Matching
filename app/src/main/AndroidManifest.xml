@@ -10,16 +10,11 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Matching">
         <activity
-                android:name=".FieldAdapter"
+                android:name=".DetailActivity"
                 android:exported="true"/>
         <activity
-                android:name=".DetailRentActivity"
+                android:name=".MatchActivity"
                 android:exported="true"/>
-        <activity
-                android:name=".TabsActivity"
-                android:exported="true"
-                android:label="@string/title_activity_tabs"
-                android:theme="@style/Theme.Matching.NoActionBar"/>
         <activity
                 android:name=".LoginActivity"
                 android:exported="true"/>
