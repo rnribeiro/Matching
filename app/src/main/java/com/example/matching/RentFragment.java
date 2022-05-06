@@ -1,10 +1,15 @@
 package com.example.matching;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,6 +49,10 @@ public class RentFragment extends Fragment {
         return fragment;
     }
 
+    public static ArrayList<Field> fieldList = new ArrayList<Field>();
+
+    private ListView listView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +60,59 @@ public class RentFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        setupData();
+        setUpList();
+        setUpOnclickListener();
+
+
+
+
+
     }
+
+    private void setupData()
+    {
+
+        Field field1 = new Field("Field 1", R.drawable.logo, "Football", "Free", 22, 22, true);
+        fieldList.add(field1);
+
+
+    }
+
+    private void setUpList()
+    {
+        listView = (ListView) getView().findViewById(R.id.rent_field_list_view);
+
+        FieldAdapter adapter = new FieldAdapter(getContext(), 0, fieldList);
+        listView.setAdapter(adapter);
+    }
+
+    private void setUpOnclickListener()
+    {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l)
+            {
+                Field selectShape = (Field) (listView.getItemAtPosition(position));
+                Intent showDetail = new Intent(getContext(), DetailRentActivity.class);
+                showDetail.putExtra("id",selectShape.getId());
+                startActivity(showDetail);
+            }
+        });
+
+    }
+
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_rent, container, false);
+
+
     }
 }

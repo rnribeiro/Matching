@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_detail.xml" value="0.20199275362318841" />
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_field_adapter.xml" value="0.20199275362318841" />
         <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_login.xml" value="0.22327898550724637" />
-        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_main.xml" value="0.22327898550724637" />
+        <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/activity_tabs.xml" value="0.1" />
         <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/fragment_find.xml" value="0.20199275362318841" />
         <entry key="..\:/Ricardo/LSTI/HCI/Matching/app/src/main/res/layout/fragment_rent.xml" value="0.20199275362318841" />
