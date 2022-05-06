@@ -13,15 +13,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button go_to_login_btn = findViewById(R.id.go_to_login_btn);
 
-
+        go_to_login_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), LoginActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
 
     }
 
-    public void onClick(View v) {
-        Intent go_to_login = new Intent(getApplicationContext(), LoginActivity.class);
-        go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(go_to_login);
-        overridePendingTransition(0,0);
-    }
 }
