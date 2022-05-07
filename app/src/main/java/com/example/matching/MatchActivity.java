@@ -139,9 +139,16 @@ public class MatchActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Field selectField = (Field) (fieldsListView.getItemAtPosition(position));
-                Intent showDetail = new Intent(getApplicationContext(), RentDetailActivity.class);
-                showDetail.putExtra("id", selectField.getId());
-                startActivity(showDetail);
+                if (current_matching_type.equals("Rent")){
+                    Intent showDetail = new Intent(getApplicationContext(), RentDetailActivity.class);
+                    showDetail.putExtra("id", selectField.getId());
+                    startActivity(showDetail);
+                }
+                else {
+                    Intent showDetail = new Intent(getApplicationContext(), FindDetailActivity.class);
+                    showDetail.putExtra("id", selectField.getId());
+                    startActivity(showDetail);
+                }
             }
         });
         filterButton.setOnClickListener(new View.OnClickListener() {
