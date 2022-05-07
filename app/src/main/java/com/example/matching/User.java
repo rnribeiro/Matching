@@ -9,6 +9,14 @@ public class User {
     private static int i = 0;
     private int photo;
 
+    public int getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(int photo) {
+        this.photo = photo;
+    }
+
     public User(String name, int photo) {
         setId(i);
         i++;

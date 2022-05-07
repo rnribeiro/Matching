@@ -1,16 +1,41 @@
 package com.example.matching;
 
+import android.content.Intent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 
 public class FriendsActivity extends AppCompatActivity {
+
+    private ListView friendsListView;
+
+
     public static ArrayList<User> friendsList = new ArrayList<User>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends);
+
+        friendsListView = (ListView) findViewById(R.id.friendsListView);
+
+        friendsListView = (ListView) findViewById(R.id.friendsListView);
+        FriendsAdapter adapter = new FriendsAdapter(getApplicationContext(), 0, friendsList);
+        friendsListView.setAdapter(adapter);
+
+        friendsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                User selectUser = (User) (friendsListView.getItemAtPosition(position));
+                Intent showDetail = new Intent(getApplicationContext(), FriendsDetailActivity.class);
+                showDetail.putExtra("id", selectUser.getId());
+                startActivity(showDetail);
+            }
+        });
+
     }
 
     private void createUsers(){

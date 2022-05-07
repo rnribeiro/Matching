@@ -12,25 +12,25 @@ import android.os.Bundle;
 
 import java.util.List;
 
-public class FriendsAdapter extends ArrayAdapter<Field> {
+public class FriendsAdapter extends ArrayAdapter<User> {
 
-    public FriendsAdapter(Context context, int resource, List<Field> friendsList) {
+    public FriendsAdapter(Context context, int resource, List<User> friendsList) {
         super(context,resource,friendsList);
     }
 
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Field field = getItem(position);
+        User user = getItem(position);
 
         if(convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.field_cell, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.friend_cell, parent, false);
         }
-        TextView tv = (TextView) convertView.findViewById(R.id.cell_field_name);
-        ImageView iv = (ImageView) convertView.findViewById(R.id.cell_field_image);
+        TextView tv = (TextView) convertView.findViewById(R.id.cell_friend_name);
+        ImageView iv = (ImageView) convertView.findViewById(R.id.cell_photo_image);
 
-        tv.setText(field.getName());
-        iv.setImageResource(field.getImage());
+        tv.setText(user.getName());
+        iv.setImageResource(user.getPhoto());
 
         return convertView;
     }
