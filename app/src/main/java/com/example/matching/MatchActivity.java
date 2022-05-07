@@ -7,6 +7,7 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ public class MatchActivity extends AppCompatActivity {
 
     private ListView fieldsListView;
 
-
+    private TabLayout tabs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +29,40 @@ public class MatchActivity extends AppCompatActivity {
         setUpListRent();
         setUpOnclickListener();
 
+        tabs = findViewById(R.id.tabLayout);
+
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                         setUpListRent();
+                        break;
+                    case 1:
+                        setUpListFind();
+                        break;
+                    case 2:
+                       setUpListTournament();
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
 
     }
+
     private void setupData() {
         Field field1 = new Field("Field A", R.drawable.logo,"Football", "Rent", 22, 22, true);
         addToLists(field1);
