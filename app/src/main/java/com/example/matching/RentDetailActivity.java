@@ -1,7 +1,9 @@
 package com.example.matching;
 
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -9,14 +11,65 @@ import android.widget.TextView;
 
 public class RentDetailActivity extends AppCompatActivity {
     Field selectedField;
-
+    Button back_from_rent_dtl_btn, rent_btn_dtl;
+    LinearLayout rent_LL_1st_left, rent_LL_2nd_left,rent_LL_3rd_left, rent_LL_4rd_left, rent_LL_5th_left;
+    LinearLayout rent_LL_1st_right, rent_LL_2nd_right,rent_LL_3rd_right, rent_LL_4th_right, rent_LL_5th_right;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rent_detail);
+        initializeWidgets();
         getSelectedField();
+        changeRows();
         setValues();
 
+
+        setOnClickListeners();
+
+
+
+    }
+
+    private void initializeWidgets() {
+        back_from_rent_dtl_btn = findViewById(R.id.back_from_rent_dtl_btn);
+        rent_btn_dtl = findViewById(R.id.rent_btn_dtl);
+
+        rent_LL_1st_left = findViewById(R.id.rent_LL_1st_right);
+        rent_LL_2nd_left = findViewById(R.id.rent_LL_2nd_left);
+        rent_LL_3rd_left = findViewById(R.id.rent_LL_3rd_left);
+        rent_LL_4rd_left = findViewById(R.id.rent_LL_4rd_left);
+        rent_LL_5th_left = findViewById(R.id.rent_LL_5th_left);
+        rent_LL_1st_right = findViewById(R.id.rent_LL_1st_right);
+        rent_LL_2nd_right = findViewById(R.id.rent_LL_2nd_right);
+        rent_LL_3rd_right = findViewById(R.id.rent_LL_3rd_right);
+        rent_LL_4th_right = findViewById(R.id.rent_LL_4th_right);
+        rent_LL_5th_right = findViewById(R.id.rent_LL_5th_right);
+    }
+
+    private void changeRows() {
+
+        if (selectedField.getSport().equals("Basketball")){
+            rent_LL_2nd_left.setVisibility(View.GONE);
+            rent_LL_4rd_left.setVisibility(View.GONE);
+            rent_LL_2nd_right.setVisibility(View.GONE);
+            rent_LL_4th_right.setVisibility(View.GONE);
+        }
+    }
+
+    private void setOnClickListeners() {
+        back_from_rent_dtl_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        rent_btn_dtl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
     }
 
     private void getSelectedField() {

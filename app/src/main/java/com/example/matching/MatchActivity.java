@@ -68,6 +68,8 @@ public class MatchActivity extends AppCompatActivity {
         addToLists(field5);
         Field field6 = new Field("Field F", R.drawable.logo, "Coimbra","Basketball", "Tournament", 22, 22, true);
         addToLists(field6);
+        Field field7 = new Field("Field G", R.drawable.logo, "Coimbra","Basketball", "Rent", 22, 22, true);
+        addToLists(field7);
 
     }
 
@@ -139,13 +141,13 @@ public class MatchActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Field selectField = (Field) (fieldsListView.getItemAtPosition(position));
-                if (current_matching_type.equals("Rent")){
+                if (selectField.getMatching_type().equals("Rent")){
                     Intent showDetail = new Intent(getApplicationContext(), RentDetailActivity.class);
                     showDetail.putExtra("id", selectField.getId());
                     startActivity(showDetail);
                 }
-                else {
-                    Intent showDetail = new Intent(getApplicationContext(), FindDetailActivity.class);
+                else if (selectField.getMatching_type().equals("Find")){
+                    Intent showDetail = new Intent(getApplicationContext(), FindFootballDetailActivity.class);
                     showDetail.putExtra("id", selectField.getId());
                     startActivity(showDetail);
                 }
