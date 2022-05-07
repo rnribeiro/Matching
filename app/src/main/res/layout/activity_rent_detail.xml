@@ -51,9 +51,9 @@
                     android:layout_width="153dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/rent_dtl_field_name"
-                    android:gravity="center_vertical"
+                    android:gravity="center"
                     android:text="Field Name"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.52"/>
             <TextView
-                    android:text="Location7"
+                    android:text="Location"
                     android:layout_width="wrap_content"
                     android:layout_height="19dp" android:id="@+id/rent_dtl_location_text_view"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
@@ -91,8 +91,8 @@
                 app:layout_constraintVertical_bias="0.62">
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
@@ -106,12 +106,8 @@
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
-                <ImageView
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton" android:layout_weight="1"/>
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
@@ -119,49 +115,53 @@
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_weight="1"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                        android:layout_height="wrap_content" android:id="@+id/imageButton4" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton5" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton6"
                         android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton7"
                         android:layout_weight="1"/>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton" android:layout_weight="1"/>
+                        android:layout_height="wrap_content" android:id="@+id/imageButton8" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_weight="1"/>
+                        android:layout_height="wrap_content" android:id="@+id/imageButton9" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_weight="1"/>
+                        android:layout_height="wrap_content" android:id="@+id/imageButton10" android:layout_weight="1"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageView5" android:layout_weight="1"/>
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView11" android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>
         <ImageView
@@ -181,83 +181,83 @@
                 app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.62">
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton12"
                         android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
-                        android:layout_weight="1"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
-                <ImageView
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton"
-                        android:layout_weight="1"/>
-                <ImageView
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton3"
-                        android:layout_weight="1"/>
-                <ImageView
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton13"
                         android:layout_weight="1"/>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton14"
                         android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton15"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton16"
                         android:layout_weight="1"/>
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton17"
                         android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton3"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton18"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton19"
                         android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton20"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton21"
                         android:layout_weight="1"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
-                    android:layout_marginTop="7">
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4dp"
+                    android:layout_marginTop="7dp">
                 <ImageView
                         android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/imageView5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:id="@+id/imageView22"
                         android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>
@@ -272,7 +272,7 @@
         <Button
                 android:text="Back"
                 android:layout_width="160dp"
-                android:layout_height="50dp" android:id="@+id/back_btn_dtl"
+                android:layout_height="60dp" android:id="@+id/back_btn_dtl"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
@@ -280,7 +280,7 @@
         <Button
                 android:text="Rent"
                 android:layout_width="160dp"
-                android:layout_height="50dp" android:id="@+id/rent_btn_dtl"
+                android:layout_height="60dp" android:id="@+id/rent_btn_dtl"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"/>

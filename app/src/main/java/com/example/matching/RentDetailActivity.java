@@ -26,10 +26,15 @@ public class RentDetailActivity extends AppCompatActivity {
     }
 
     private void setValues() {
-        TextView tv = (TextView) findViewById(R.id.rent_dtl_field_name);
-        ImageView iv = (ImageView) findViewById(R.id.rent_dtl_field_image);
+        TextView rent_dtl_field_name = (TextView) findViewById(R.id.rent_dtl_field_name);
+        ImageView rent_dtl_field_image = (ImageView) findViewById(R.id.rent_dtl_field_image);
+        TextView rent_dtl_time_text_view = findViewById(R.id.rent_dtl_time_text_view);
+        TextView rent_dtl_location_text_view = findViewById(R.id.rent_dtl_location_text_view);
 
-        tv.setText(selectedField.getName());
-        iv.setImageResource(selectedField.getImage());
+
+        rent_dtl_field_name.setText(selectedField.getName());
+        rent_dtl_field_image.setImageResource(selectedField.getImage());
+        rent_dtl_time_text_view.setText("Time: 18:00 - 19:00");
+        rent_dtl_location_text_view.setText(selectedField.getLocation());
     }
 }
