@@ -85,13 +85,13 @@
                         android:layout_weight="0"
                         android:layout_height="wrap_content"
                         android:text="All"
-                        android:onClick="allFilterTapped"/>
+                        android:onClick="allFilterTapped" android:id="@+id/allButtonFilter"/>
                 <Button
                         android:layout_width="match_parent"
                         android:layout_weight="0"
                         android:layout_height="match_parent"
                         android:text="Football"
-                        android:id="@+id/FootballFilter"
+                        android:id="@+id/footballFilter"
                         android:onClick="triangleFilterTapped"/>
 
                 <Button
@@ -99,14 +99,14 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="Basketball"
-                        android:id="@+id/BasketFilter"
+                        android:id="@+id/basketballFilter"
                         android:onClick="squareFilterTapped"/>
                 <Button
                         android:layout_width="match_parent"
                         android:layout_weight="0"
                         android:layout_height="wrap_content"
                         android:text="Tennis"
-                        android:id="@+id/TenisFilter"
+                        android:id="@+id/tennisFilter"
                         android:onClick="squareFilterTapped"/>
 
             </LinearLayout>

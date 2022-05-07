@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="120dp">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="horizontal"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="130dp" android:id="@+id/relativeLayout"
+>
 
     <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/cell_field_name"
             android:gravity="center_vertical"
-            android:text="shape name"
+            android:text="Field Name"
             android:textSize="20dp"
-            android:layout_marginLeft="20dp"/>
-
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.783"
+            app:layout_constraintVertical_bias="0.155"/>
     <ImageView
             android:id="@+id/cell_field_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="20dp"/>
+            android:layout_width="129dp"
+            android:layout_height="95dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.113" app:layout_constraintVertical_bias="0.428"
+            app:srcCompat="@drawable/logo"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/timeTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.504" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.747"/>
+    <TextView
+            android:text="Location: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/LocationTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.828" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.754"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

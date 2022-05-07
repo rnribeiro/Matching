@@ -7,13 +7,11 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity
-{
+public class DetailActivity extends AppCompatActivity {
     Field selectedField;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         getSelectedField();
@@ -21,15 +19,13 @@ public class DetailActivity extends AppCompatActivity
 
     }
 
-    private void getSelectedField()
-    {
+    private void getSelectedField() {
         Intent previousIntent = getIntent();
         String parsedStringID = previousIntent.getStringExtra("id");
         selectedField = MatchActivity.FieldList.get(Integer.valueOf(parsedStringID));
     }
 
-    private void setValues()
-    {
+    private void setValues() {
         TextView tv = (TextView) findViewById(R.id.dtl_field_name);
         ImageView iv = (ImageView) findViewById(R.id.dtl_field_image);
 
