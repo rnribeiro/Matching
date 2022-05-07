@@ -5,7 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MatchActivity">
+        tools:context=".MatchActivity" android:backgroundTint="#FFFFFF" android:background="#FFFFFF"
+        android:backgroundTintMode="src_over">
 
     <ImageView
             android:src="@drawable/logo"
@@ -68,93 +69,109 @@
                 android:background="@null"
                 android:text="FILTER"
                 android:textSize="24sp"/>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/filterLayout" android:baselineAligned="false"
-                android:layout_gravity="right" android:visibility="gone">
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/sportsFilterLayout" android:layout_weight="0">
-
-                <Button
-                        android:layout_width="match_parent"
-                        android:layout_weight="0"
-                        android:layout_height="wrap_content"
-                        android:text="All"
-                        android:id="@+id/allButtonFilter"/>
-                <Button
-                        android:layout_width="match_parent"
-                        android:layout_weight="0"
-                        android:layout_height="match_parent"
-                        android:text="Football"
-                        android:id="@+id/footballFilter"
-                />
-
-                <Button
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="Basketball"
-                        android:id="@+id/basketballFilter"
-                />
-                <Button
-                        android:layout_width="match_parent"
-                        android:layout_weight="0"
-                        android:layout_height="wrap_content"
-                        android:text="Tennis"
-                        android:id="@+id/tennisFilter"
-                />
-
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="98dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/timeLayout" android:layout_weight="0"
-                    android:layout_gravity="center">
-
-                <TextView
-                        android:text="Hour"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/hourTextView" android:layout_weight="0"
-                        android:textAlignment="center"/>
-                <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:ems="10"
-                        android:id="@+id/hourFilterInput" android:layout_weight="0"/>
-                <TextView
-                        android:text="Minutes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/minutesTextView"
-                        android:layout_weight="0" android:textAlignment="center"/>
-                <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:ems="10"
-                        android:id="@+id/minutesFilterInput" android:layout_weight="0"/>
-
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:layout_weight="0" android:id="@+id/LocationFilter"
-                    android:gravity="center">
-                <Button
-                        android:text="Location"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/locationFilterButton"
-                        android:gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-        <ListView
+        <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="346dp" android:id="@+id/fieldsListView"/>
+                android:layout_height="match_parent">
+
+            <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="537dp" android:id="@+id/fieldsListView">
+            </ListView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:cardCornerRadius="10dp"
+                    android:layout_alignParentRight="true" android:visibility="gone" android:id="@+id/cardView">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/filterLayout"
+                        android:baselineAligned="false"
+                        android:layout_gravity="right|top" android:background="#D1CAC7"
+                        android:gravity="top">
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/sportsFilterLayout" android:layout_weight="0">
+
+                        <Button
+                                android:layout_width="match_parent"
+                                android:layout_weight="0"
+                                android:layout_height="wrap_content"
+                                android:text="All"
+                                android:id="@+id/allButtonFilter"/>
+                        <Button
+                                android:layout_width="match_parent"
+                                android:layout_weight="0"
+                                android:layout_height="match_parent"
+                                android:text="Football"
+                                android:id="@+id/footballFilter"
+                        />
+
+                        <Button
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Basketball"
+                                android:id="@+id/basketballFilter"
+                        />
+                        <Button
+                                android:layout_width="match_parent"
+                                android:layout_weight="0"
+                                android:layout_height="wrap_content"
+                                android:text="Tennis"
+                                android:id="@+id/tennisFilter"
+                        />
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/timeLayout" android:layout_weight="0"
+                            android:layout_gravity="center">
+
+                        <TextView
+                                android:text="Hour"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:id="@+id/hourTextView"
+                                android:layout_weight="0"
+                                android:textAlignment="center" android:textColor="#000000" android:textSize="20sp"/>
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/hourFilterInput" android:layout_weight="0"/>
+                        <TextView
+                                android:text="Minutes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:id="@+id/minutesTextView"
+                                android:layout_weight="0" android:textAlignment="center" android:textColor="#000000"
+                                android:textSize="20sp"/>
+                        <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/minutesFilterInput" android:layout_weight="0"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_weight="0"
+                            android:id="@+id/LocationFilter"
+                            android:gravity="center">
+                        <Button
+                                android:text="Location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:id="@+id/locationFilterButton"
+                                android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
     </LinearLayout>
 
 

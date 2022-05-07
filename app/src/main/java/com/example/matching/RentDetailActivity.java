@@ -34,7 +34,7 @@ public class RentDetailActivity extends AppCompatActivity {
         back_from_rent_dtl_btn = findViewById(R.id.back_from_rent_dtl_btn);
         rent_btn_dtl = findViewById(R.id.rent_btn_dtl);
 
-        rent_LL_1st_left = findViewById(R.id.rent_LL_1st_right);
+        rent_LL_1st_left = findViewById(R.id.rent_LL_1st_left);
         rent_LL_2nd_left = findViewById(R.id.rent_LL_2nd_left);
         rent_LL_3rd_left = findViewById(R.id.rent_LL_3rd_left);
         rent_LL_4rd_left = findViewById(R.id.rent_LL_4rd_left);
@@ -53,6 +53,57 @@ public class RentDetailActivity extends AppCompatActivity {
             rent_LL_4rd_left.setVisibility(View.GONE);
             rent_LL_2nd_right.setVisibility(View.GONE);
             rent_LL_4th_right.setVisibility(View.GONE);
+
+            rent_LL_1st_left.setVisibility(View.VISIBLE);
+            rent_LL_3rd_left.setVisibility(View.VISIBLE);
+
+            rent_LL_5th_left.setVisibility(View.VISIBLE);
+            rent_LL_1st_right.setVisibility(View.VISIBLE);
+
+            rent_LL_3rd_right.setVisibility(View.VISIBLE);
+
+            rent_LL_5th_right.setVisibility(View.VISIBLE);
+
+
+
+
+        } else if (selectedField.getSport().equals("Tennis")){
+
+            rent_LL_2nd_left.setVisibility(View.GONE);
+            rent_LL_2nd_right.setVisibility(View.GONE);
+            rent_LL_4rd_left.setVisibility(View.GONE);
+            rent_LL_4th_right.setVisibility(View.GONE);
+            rent_LL_5th_left.setVisibility(View.GONE);
+            rent_LL_5th_right.setVisibility(View.GONE);
+
+
+            if (selectedField.getCapacity()==2){
+                rent_LL_3rd_left.setVisibility(View.GONE);
+                rent_LL_3rd_right.setVisibility(View.GONE);
+
+                rent_LL_1st_left.setVisibility(View.VISIBLE);
+                rent_LL_1st_right.setVisibility(View.VISIBLE);
+
+
+            } else {
+                rent_LL_1st_left.setVisibility(View.GONE);
+                rent_LL_1st_right.setVisibility(View.GONE);
+
+                rent_LL_3rd_left.setVisibility(View.VISIBLE);
+                rent_LL_3rd_right.setVisibility(View.VISIBLE);
+            }
+
+        } else {
+            rent_LL_1st_left.setVisibility(View.VISIBLE);
+            rent_LL_2nd_left.setVisibility(View.VISIBLE);
+            rent_LL_3rd_left.setVisibility(View.VISIBLE);
+            rent_LL_4rd_left.setVisibility(View.VISIBLE);
+            rent_LL_5th_left.setVisibility(View.VISIBLE);
+            rent_LL_1st_right.setVisibility(View.VISIBLE);
+            rent_LL_2nd_right.setVisibility(View.VISIBLE);
+            rent_LL_3rd_right.setVisibility(View.VISIBLE);
+            rent_LL_4th_right.setVisibility(View.VISIBLE);
+            rent_LL_5th_right.setVisibility(View.VISIBLE);
         }
     }
 

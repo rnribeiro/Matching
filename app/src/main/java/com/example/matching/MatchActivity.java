@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import com.google.android.material.tabs.TabLayout;
 
@@ -20,7 +21,7 @@ public class MatchActivity extends AppCompatActivity {
     public static ArrayList<Field> findFieldList = new ArrayList<Field>();
     public static ArrayList<Field> tournamentFieldList = new ArrayList<Field>();
     private ListView fieldsListView;
-    private LinearLayout filterLayout;
+    private CardView cardView;
     boolean filterHidden = true;
     private Button filterButton, allButtonFilter, footballButtonFilter, basketballButtonFilter, tennisButtonFilter;
     private ArrayList<String> selectedFilters = new ArrayList<String>();
@@ -51,7 +52,7 @@ public class MatchActivity extends AppCompatActivity {
         basketballButtonFilter = findViewById(R.id.basketballFilter);
         tennisButtonFilter = findViewById(R.id.tennisFilter);
         tabs = findViewById(R.id.tabLayout);
-        filterLayout = findViewById(R.id.filterLayout);
+        cardView = findViewById(R.id.cardView);
         fieldsListView = (ListView) findViewById(R.id.fieldsListView);
     }
 
@@ -60,11 +61,11 @@ public class MatchActivity extends AppCompatActivity {
         addToLists(field1);
         Field field2 = new Field("Field B", R.drawable.logo, "Porto", "Basketball", "Find", 22, 22, true);
         addToLists(field2);
-        Field field3 = new Field("Field C", R.drawable.logo, "Faro", "Tennis", "Rent", 22, 22, true);
+        Field field3 = new Field("Field C", R.drawable.logo, "Faro", "Tennis", "Rent", 2, 2, true);
         addToLists(field3);
         Field field4 = new Field("Field D", R.drawable.logo, "Lisbon","Football", "Tournament", 22, 22, true);
         addToLists(field4);
-        Field field5 = new Field("Field E", R.drawable.logo, "Beja","Tennis", "Find", 22, 22, true);
+        Field field5 = new Field("Field E", R.drawable.logo, "Beja","Tennis", "Rent", 4, 4, true);
         addToLists(field5);
         Field field6 = new Field("Field F", R.drawable.logo, "Coimbra","Basketball", "Tournament", 22, 22, true);
         addToLists(field6);
@@ -110,6 +111,8 @@ public class MatchActivity extends AppCompatActivity {
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                filterHidden=false;
+                hideFilter();
                 switch (tab.getPosition()) {
                     case 0:
                         setUpListRent();
@@ -140,6 +143,8 @@ public class MatchActivity extends AppCompatActivity {
         fieldsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                filterHidden = false;
+                hideFilter();
                 Field selectField = (Field) (fieldsListView.getItemAtPosition(position));
                 if (selectField.getMatching_type().equals("Rent")){
                     Intent showDetail = new Intent(getApplicationContext(), RentDetailActivity.class);
@@ -147,7 +152,7 @@ public class MatchActivity extends AppCompatActivity {
                     startActivity(showDetail);
                 }
                 else if (selectField.getMatching_type().equals("Find")){
-                    Intent showDetail = new Intent(getApplicationContext(), FindFootballDetailActivity.class);
+                    Intent showDetail = new Intent(getApplicationContext(), FindDetailActivity.class);
                     showDetail.putExtra("id", selectField.getId());
                     startActivity(showDetail);
                 }
@@ -263,11 +268,11 @@ public class MatchActivity extends AppCompatActivity {
         fieldsListView.setAdapter(adapter);
     }
     private void hideFilter() {
-        filterLayout.setVisibility(View.GONE);
+        cardView.setVisibility(View.GONE);
         filterButton.setText("FILTER");
     }
     private void showFilter() {
-        filterLayout.setVisibility(View.VISIBLE);
+        cardView.setVisibility(View.VISIBLE);
         filterButton.setText("HIDE");
     }
 
