@@ -30,7 +30,7 @@
             android:layout_height="641dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="1.0" android:id="@+id/rent_btn">
 
         <ImageView
                 android:id="@+id/rent_dtl_field_image"
@@ -41,32 +41,249 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.06"/>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="168dp"
-                android:layout_height="116dp" app:layout_constraintStart_toStartOf="parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="174dp"
+                android:layout_height="123dp" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.82"
-                app:layout_constraintVertical_bias="0.07999998" android:gravity="center">
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.898"
+                app:layout_constraintVertical_bias="0.059" android:gravity="center" android:id="@+id/linearLayout">
             <TextView
                     android:layout_width="153dp"
-                    android:layout_height="39dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/rent_dtl_field_name"
                     android:gravity="center_vertical"
                     android:text="Field Name"
                     android:textSize="20dp"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.19"/>
             <TextView
                     android:text="Time"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/rent_dtl_time_text_view"
-            />
+                    android:layout_height="19dp" android:id="@+id/rent_dtl_time_text_view"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.52"/>
             <TextView
                     android:text="Location7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/rent_dtl_location_text_view"
-            />
+                    android:layout_height="19dp" android:id="@+id/rent_dtl_location_text_view"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.846" app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+                android:src="@drawable/football_field"
+                android:layout_width="162dp"
+                android:layout_height="227dp" android:id="@+id/left_field_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.132"
+                app:layout_constraintVertical_bias="0.615"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rent_players_left" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.13"
+                app:layout_constraintVertical_bias="0.62">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton" android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton" android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton3" android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageView5" android:layout_weight="1"/>
+            </LinearLayout>
         </LinearLayout>
+        <ImageView
+                android:src="@drawable/football_field"
+                android:layout_width="162dp"
+                android:layout_height="227dp" android:id="@+id/right_field_image"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.879" app:layout_constraintVertical_bias="0.615"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rent_players_right" android:layout_weight="0"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.62">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton3"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton3"
+                        android:layout_weight="1"/>
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="0" android:layout_marginBottom="4"
+                    android:layout_marginTop="7">
+                <ImageView
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/imageView5"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+                android:src="@drawable/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="247dp" android:id="@+id/separator"
+                app:layout_constraintStart_toEndOf="@+id/left_field_image" app:layout_constraintHorizontal_bias="0.434"
+                app:layout_constraintEnd_toStartOf="@+id/right_field_image"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.615"/>
+        <Button
+                android:text="Back"
+                android:layout_width="160dp"
+                android:layout_height="50dp" android:id="@+id/back_btn_dtl"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.136" app:layout_constraintVertical_bias="0.932"/>
+        <Button
+                android:text="Rent"
+                android:layout_width="160dp"
+                android:layout_height="50dp" android:id="@+id/rent_btn_dtl"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
