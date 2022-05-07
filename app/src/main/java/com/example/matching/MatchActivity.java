@@ -56,17 +56,17 @@ public class MatchActivity extends AppCompatActivity {
     }
 
     private void createFields() {
-        Field field1 = new Field("Field A", R.drawable.logo, "Football", "Rent", 22, 22, true);
+        Field field1 = new Field("Field A", R.drawable.logo, "Lisbon", "Football", "Rent", 22, 22, true);
         addToLists(field1);
-        Field field2 = new Field("Field B", R.drawable.logo, "Basketball", "Find", 22, 22, true);
+        Field field2 = new Field("Field B", R.drawable.logo, "Porto", "Basketball", "Find", 22, 22, true);
         addToLists(field2);
-        Field field3 = new Field("Field C", R.drawable.logo, "Tennis", "Rent", 22, 22, true);
+        Field field3 = new Field("Field C", R.drawable.logo, "Faro", "Tennis", "Rent", 22, 22, true);
         addToLists(field3);
-        Field field4 = new Field("Field D", R.drawable.logo, "Football", "Tournament", 22, 22, true);
+        Field field4 = new Field("Field D", R.drawable.logo, "Lisbon","Football", "Tournament", 22, 22, true);
         addToLists(field4);
-        Field field5 = new Field("Field E", R.drawable.logo, "Tennis", "Find", 22, 22, true);
+        Field field5 = new Field("Field E", R.drawable.logo, "Beja","Tennis", "Find", 22, 22, true);
         addToLists(field5);
-        Field field6 = new Field("Field F", R.drawable.logo, "Basketball", "Tournament", 22, 22, true);
+        Field field6 = new Field("Field F", R.drawable.logo, "Coimbra","Basketball", "Tournament", 22, 22, true);
         addToLists(field6);
 
     }
@@ -139,7 +139,7 @@ public class MatchActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Field selectField = (Field) (fieldsListView.getItemAtPosition(position));
-                Intent showDetail = new Intent(getApplicationContext(), DetailActivity.class);
+                Intent showDetail = new Intent(getApplicationContext(), RentDetailActivity.class);
                 showDetail.putExtra("id", selectField.getId());
                 startActivity(showDetail);
             }

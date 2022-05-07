@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:orientation="horizontal"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:id="@+id/relativeLayout2">
+
+
+    <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="215dp"
+                android:layout_height="50dp" android:id="@+id/logo_img_view"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.023"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+        <ImageButton
+                android:src="@drawable/menu_icon"
+                android:layout_width="55dp"
+                android:layout_height="50dp" android:id="@+id/menu_icon_btn"
+                android:background="#00FFFFFF"
+                tools:ignore="SpeakableTextPresentCheck"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.081"
+                app:layout_constraintVertical_bias="0.023"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="641dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+                android:id="@+id/rent_dtl_field_image"
+                android:layout_width="151dp"
+                android:layout_height="127dp"
+                android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.06"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.77"
+                app:layout_constraintVertical_bias="0.07999998" android:gravity="center">
+            <TextView
+                    android:layout_width="153dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/rent_dtl_field_name"
+                    android:gravity="center_vertical"
+                    android:text="Field Name"
+                    android:textSize="20dp"
+                    android:textAlignment="center"/>
+            <TextView
+                    android:text="Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rent_dtl_time_text_view"
+            />
+            <TextView
+                    android:text="Location7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rent_dtl_location_text_view"
+            />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

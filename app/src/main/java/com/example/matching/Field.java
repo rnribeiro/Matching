@@ -12,10 +12,14 @@ public class Field {
     private int available_capacity;
     private boolean available;
     private static int i=0;
+    private String location;
 
-    public Field(String name, int image, String sport, String matching_type, int capacity, int available_capacity, boolean available) {
+
+
+    public Field(String name, int image, String location, String sport, String matching_type, int capacity, int available_capacity, boolean available) {
         setId(i);
         i++;
+        this.location = location;
         this.name = name;
         this.image = image;
         this.sport = sport;
@@ -89,5 +93,13 @@ public class Field {
         this.available = available;
     }
 
+    public String getLocation() {
+
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
 }

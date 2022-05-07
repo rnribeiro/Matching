@@ -10,7 +10,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Matching">
         <activity
-                android:name=".DetailActivity"
+                android:name=".RentDetailActivity"
                 android:exported="true"/>
         <activity
                 android:name=".MatchActivity"
