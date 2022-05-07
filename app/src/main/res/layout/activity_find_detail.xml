@@ -40,7 +40,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.06"/>
+                app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.06"
+                android:clickable="false"/>
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="174dp"
                 android:layout_height="123dp" app:layout_constraintStart_toStartOf="parent"
@@ -93,14 +94,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/find_LL_5th_left">
                 <ImageButton
-                        android:src="@drawable/user_icon"
+                        android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
+                        android:layout_height="48dp" android:id="@+id/findImageButton1"
+                        android:layout_weight="1" android:background="#00FFFFFF" android:onClick="changeImage"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton2"
+                        android:layout_height="48dp" android:id="@+id/findImageButton2"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -109,17 +110,17 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton3" android:layout_weight="1"
+                        android:layout_height="48dp" android:id="@+id/findImageButton3" android:layout_weight="1"
                         android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton4" android:layout_weight="1"
+                        android:layout_height="48dp" android:id="@+id/findImageButton4" android:layout_weight="1"
                         android:background="#00FFFFFF"/>
                 <ImageButton
-                        android:src="@drawable/user_icon"
+                        android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton5" android:layout_weight="1"
+                        android:layout_height="48dp" android:id="@+id/findImageButton5" android:layout_weight="1"
                         android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -128,12 +129,12 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton6"
+                        android:layout_height="48dp" android:id="@+id/findImageButton6"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton7"
+                        android:layout_height="48dp" android:id="@+id/findImageButton7"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -142,17 +143,17 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton8" android:layout_weight="1"
+                        android:layout_height="48dp" android:id="@+id/findImageButton8" android:layout_weight="1"
                         android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton9" android:layout_weight="1"
+                        android:layout_height="48dp" android:id="@+id/findImageButton9" android:layout_weight="1"
                         android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton10" android:layout_weight="1"
+                        android:layout_height="48dp" android:id="@+id/findImageButton10" android:layout_weight="1"
                         android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -162,7 +163,7 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="0dp"
-                        android:layout_height="48dp" android:id="@+id/rentImageButton11"
+                        android:layout_height="48dp" android:id="@+id/findImageButton11"
                         android:layout_weight="1"
                         android:background="#00FFFFFF"/>
             </LinearLayout>
@@ -188,14 +189,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/find_LL_5th_right">
                 <ImageButton
-                        android:src="@drawable/user_icon"
+                        android:src="@drawable/plus_sign"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton12"
+                        android:layout_height="48dp" android:id="@+id/findImageButton12"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton13"
+                        android:layout_height="48dp" android:id="@+id/findImageButton13"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -204,17 +205,17 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton14"
+                        android:layout_height="48dp" android:id="@+id/findImageButton14"
+                        android:layout_weight="1" android:background="#00FFFFFF"/>
+                <ImageButton
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp" android:id="@+id/findImageButton15"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton15"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton16"
+                        android:layout_height="48dp" android:id="@+id/findImageButton16"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -223,12 +224,12 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton17"
+                        android:layout_height="48dp" android:id="@+id/findImageButton17"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton18"
+                        android:layout_height="48dp" android:id="@+id/findImageButton18"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -237,17 +238,17 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton19"
+                        android:layout_height="48dp" android:id="@+id/findImageButton19"
+                        android:layout_weight="1" android:background="#00FFFFFF"/>
+                <ImageButton
+                        android:src="@drawable/plus_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp" android:id="@+id/findImageButton20"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton20"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/imageButton21"
+                        android:layout_height="48dp" android:id="@+id/findImageButton21"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
             </LinearLayout>
             <LinearLayout
@@ -257,7 +258,7 @@
                 <ImageButton
                         android:src="@drawable/user_icon"
                         android:layout_width="0dp"
-                        android:layout_height="48dp" android:id="@+id/rentImageButton22"
+                        android:layout_height="48dp" android:id="@+id/findImageButton22"
                         android:layout_weight="1" android:background="#00FFFFFF"/>
             </LinearLayout>
         </LinearLayout>

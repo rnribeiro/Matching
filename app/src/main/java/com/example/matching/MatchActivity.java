@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +16,7 @@ import java.util.ArrayList;
 public class MatchActivity extends AppCompatActivity {
 
     public static ArrayList<Field> FieldList = new ArrayList<Field>();
+
     public static ArrayList<Field> rentFieldList = new ArrayList<Field>();
     public static ArrayList<Field> findFieldList = new ArrayList<Field>();
     public static ArrayList<Field> tournamentFieldList = new ArrayList<Field>();
@@ -74,6 +74,8 @@ public class MatchActivity extends AppCompatActivity {
 
     }
 
+
+
     private void addToLists(Field field) {
         FieldList.add(field);
         switch (field.getMatching_type()) {
@@ -88,6 +90,7 @@ public class MatchActivity extends AppCompatActivity {
                 break;
         }
     }
+
 
     private void setUpListRent() {
         fieldsListView = (ListView) findViewById(R.id.fieldsListView);

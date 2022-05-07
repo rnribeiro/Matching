@@ -2,6 +2,8 @@ package com.example.matching;
 
 import android.view.View;
 
+import java.util.ArrayList;
+
 public class Field {
     private int id;
     private String name;
@@ -13,6 +15,8 @@ public class Field {
     private boolean available;
     private static int i=0;
     private String location;
+
+    private ArrayList<User> users = new ArrayList<User>();
 
 
 
