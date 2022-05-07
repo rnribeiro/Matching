@@ -1,5 +1,7 @@
 package com.example.matching;
 
+import android.view.View;
+
 public class Field {
     private int id;
     private String name;
@@ -86,4 +88,6 @@ public class Field {
     public void setAvailable(boolean available) {
         this.available = available;
     }
+
+
 }

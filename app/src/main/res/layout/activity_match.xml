@@ -64,16 +64,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:background="@null"
-                android:onClick="showFilterTapped"
                 android:text="FILTER"
                 android:textSize="24sp"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/filterLayout" android:baselineAligned="false"
-                android:layout_gravity="right">
+                android:layout_gravity="right" android:visibility="gone">
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -85,14 +84,14 @@
                         android:layout_weight="0"
                         android:layout_height="wrap_content"
                         android:text="All"
-                        android:onClick="allFilterTapped" android:id="@+id/allButtonFilter"/>
+                        android:id="@+id/allButtonFilter"/>
                 <Button
                         android:layout_width="match_parent"
                         android:layout_weight="0"
                         android:layout_height="match_parent"
                         android:text="Football"
                         android:id="@+id/footballFilter"
-                        android:onClick="triangleFilterTapped"/>
+                />
 
                 <Button
                         android:layout_width="match_parent"
@@ -100,14 +99,14 @@
                         android:layout_height="wrap_content"
                         android:text="Basketball"
                         android:id="@+id/basketballFilter"
-                        android:onClick="squareFilterTapped"/>
+                />
                 <Button
                         android:layout_width="match_parent"
                         android:layout_weight="0"
                         android:layout_height="wrap_content"
                         android:text="Tennis"
                         android:id="@+id/tennisFilter"
-                        android:onClick="squareFilterTapped"/>
+                />
 
             </LinearLayout>
             <LinearLayout
