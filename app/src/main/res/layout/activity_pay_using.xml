@@ -39,19 +39,25 @@
             android:layout_width="355dp"
             android:layout_height="156dp"
             android:id="@+id/button7"
-            tools:layout_editor_absoluteY="188dp"
-            tools:layout_editor_absoluteX="28dp"
             android:backgroundTint="#37A82A"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.351"/>
 
     <Button
             android:text="In person"
             android:layout_width="355dp"
             android:layout_height="156dp"
             android:id="@+id/button8"
-            tools:layout_editor_absoluteY="371dp"
-            tools:layout_editor_absoluteX="28dp"
             android:backgroundTint="#37A82A"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.657"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
