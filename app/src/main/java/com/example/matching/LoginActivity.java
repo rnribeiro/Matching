@@ -35,5 +35,6 @@ public class LoginActivity extends AppCompatActivity {
                 overridePendingTransition(0,0);
             }
         });
+
     }
 }

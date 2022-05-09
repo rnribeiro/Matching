@@ -34,7 +34,7 @@ app:layout_constraintVertical_bias="0.023"/>
 
         <ImageView
                 android:layout_width="128dp"
-                android:layout_height="128dp" app:srcCompat="@drawable/user_icon" android:id="@+id/imageView"
+                android:layout_height="128dp" app:srcCompat="@drawable/user_icon" android:id="@+id/photo_friend_imageview"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.171"
@@ -42,38 +42,71 @@ app:layout_constraintVertical_bias="0.023"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView"
+                android:layout_height="wrap_content" android:id="@+id/friend_name_textview"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.759" app:layout_constraintVertical_bias="0.125"/>
+                app:layout_constraintHorizontal_bias="0.776" app:layout_constraintVertical_bias="0.142"
+                android:textSize="24sp"/>
         <Button
-                android:text="Button"
-                android:layout_width="280dp"
-                android:layout_height="88dp" android:id="@+id/button"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.496" app:layout_constraintVertical_bias="0.326"/>
+                android:text="See Events"
+                android:layout_width="275dp"
+                android:layout_height="70dp"
+                android:id="@+id/see_events_friend_detail_btn"
+                android:backgroundTint="#37A82A"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.33999997" android:capitalize="words" android:textAllCaps="false"/>
         <Button
-                android:text="Button"
-                android:layout_width="280dp"
-                android:layout_height="88dp" android:id="@+id/button2"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.496" app:layout_constraintVertical_bias="0.527"/>
+                android:text="Invite to event"
+                android:layout_width="275dp"
+                android:layout_height="70dp"
+                android:id="@+id/invite_friend_detail_btn"
+                android:backgroundTint="#37A82A"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.47000003" android:capitalize="words" android:textAllCaps="false"/>
         <Button
-                android:text="Button"
-                android:layout_width="280dp"
-                android:layout_height="88dp" android:id="@+id/button3"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.496" app:layout_constraintVertical_bias="0.705"/>
+                android:text="Message"
+                android:layout_width="275dp"
+                android:layout_height="70dp"
+                android:id="@+id/message_friend_detail_btn"
+                android:backgroundTint="#37A82A"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.61" android:capitalize="words" android:textAllCaps="false"/>
         <Button
-                android:text="Button"
-                android:layout_width="280dp"
-                android:layout_height="88dp" android:id="@+id/button4"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.496" app:layout_constraintVertical_bias="0.895"/>
+                android:text="Remove friend"
+                android:layout_width="275dp"
+                android:layout_height="70dp"
+                android:id="@+id/remove_friend_detail_btn"
+                android:backgroundTint="#37A82A"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.75" android:capitalize="words" android:textAllCaps="false"/>
+        <Button
+                android:text="Back"
+                android:layout_width="125dp"
+                android:layout_height="55dp"
+                android:id="@+id/back_friend_detail_btn"
+                android:backgroundTint="#37A82A"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.87" android:capitalize="words" android:textAllCaps="true"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

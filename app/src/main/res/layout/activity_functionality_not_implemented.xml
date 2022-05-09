@@ -63,8 +63,8 @@
 
     <Button
             android:text="Close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="125dp"
+            android:layout_height="55dp"
             android:id="@+id/button5"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -72,6 +72,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintVertical_bias="0.877"
-            android:backgroundTint="#37A82A"/>
+            android:backgroundTint="#37A82A" android:textSize="16sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

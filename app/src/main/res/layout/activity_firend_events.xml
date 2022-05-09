@@ -9,22 +9,22 @@
 
     <Button
             android:text="Close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button10"
+            android:layout_width="125dp"
+            android:layout_height="55dp"
+            android:id="@+id/close_button_friend_events"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.956"
-            android:backgroundTint="#37A82A"/>
+            app:layout_constraintVertical_bias="0.88"
+            android:backgroundTint="#37A82A" android:textSize="16sp"/>
 
     <TextView
             android:text="Events"
             android:layout_width="126dp"
             android:layout_height="48dp"
-            android:id="@+id/textView5"
+            android:id="@+id/events_textview"
             android:textSize="35sp"
             android:gravity="center_horizontal|center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
