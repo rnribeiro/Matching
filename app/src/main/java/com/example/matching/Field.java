@@ -18,6 +18,8 @@ public class Field {
 
     private ArrayList<User> users = new ArrayList<User>();
 
+    private String field;
+
 
 
     public Field(String name, int image, String location, String sport, String matching_type, int capacity, int available_capacity, boolean available) {
@@ -31,6 +33,10 @@ public class Field {
         this.capacity = capacity;
         this.available_capacity = available_capacity;
         this.available = available;
+
+        if S
+
+
     }
 
     public int getId() {

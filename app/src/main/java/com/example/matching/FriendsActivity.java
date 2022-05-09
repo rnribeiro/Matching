@@ -20,6 +20,8 @@ public class FriendsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends);
 
+        createUsers();
+
         friendsListView = (ListView) findViewById(R.id.friendsListView);
 
         friendsListView = (ListView) findViewById(R.id.friendsListView);
