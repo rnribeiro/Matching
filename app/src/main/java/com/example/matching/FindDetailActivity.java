@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 
@@ -17,8 +18,8 @@ public class FindDetailActivity extends AppCompatActivity {
     LinearLayout find_LL_1st_right, find_LL_2nd_right,find_LL_3rd_right, find_LL_4th_right, find_LL_5th_right;
     ImageView left_field, right_field;
     ImageButton ibtn1, ibtn2, ibtn3, ibtn4, ibtn5, ibtn6, ibtn7, ibtn8, ibtn9, ibtn10, ibtn11, ibtn12, ibtn13, ibtn14, ibtn15, ibtn16, ibtn17, ibtn18, ibtn19, ibtn20, ibtn21, ibtn22;
-    Boolean bbtn1= false; Boolean bbtn2= false; Boolean bbtn3= false; Boolean bbtn4= false; Boolean bbtn5= false; Boolean bbtn6= false; Boolean bbtn7= false; Boolean bbtn8= false; Boolean bbtn9= false; Boolean bbtn10= false; Boolean bbtn11= false; Boolean bbtn12= false; Boolean bbtn13= false; Boolean bbtn14= false; Boolean bbtn15= false; Boolean bbtn16= false; Boolean bbtn17= false; Boolean bbtn18= false; Boolean bbtn19= false; Boolean bbtn20= false; Boolean bbtn21= false; Boolean bbtn22 = false;
-
+    Boolean checked = false;
+    Boolean bbtn1 = false; Boolean bbtn5 = false; Boolean bbtn12 = false; Boolean bbtn15 = false; Boolean bbtn20 = false;
 
 //    ImageButton findImageButton1,
 //    findImageButton2,
@@ -54,6 +55,8 @@ public class FindDetailActivity extends AppCompatActivity {
         getSelectedField();
         setValues();
         setOnClickListeners();
+        join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+        join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
 
     }
 
@@ -236,9 +239,162 @@ public class FindDetailActivity extends AppCompatActivity {
         join_btn_dtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                if(checked==true){
+                    finish();
+                }
             }
         });
+
+        ibtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bbtn1 == false && checked == false) {
+                    ibtn1.setImageResource(R.drawable.green_circle);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    checked = true;
+                    bbtn1=true;
+                } else if(bbtn1 == true && checked == true) {
+                    ibtn1.setImageResource(R.drawable.plus_sign);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
+                    checked = false;
+                    bbtn1=false;
+                } else if(bbtn1 == false && checked == true){
+                    bbtn15 = false;
+                    bbtn12 = false;
+                    bbtn5 = false;
+                    bbtn20 = false;
+                    ibtn15.setImageResource(R.drawable.plus_sign);
+                    ibtn12.setImageResource(R.drawable.plus_sign);
+                    ibtn5.setImageResource(R.drawable.plus_sign);
+                    ibtn20.setImageResource(R.drawable.plus_sign);
+                    ibtn1.setImageResource(R.drawable.green_circle);
+                    bbtn1=true;
+                }
+            }
+        });
+
+        ibtn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bbtn5 == false && checked == false) {
+                    ibtn5.setImageResource(R.drawable.green_circle);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    checked = true;
+                    bbtn5=true;
+                } else if(bbtn5 == true && checked == true) {
+                    ibtn5.setImageResource(R.drawable.plus_sign);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
+                    checked = false;
+                    bbtn5=false;
+                } else if(bbtn5 == false && checked == true){
+                    bbtn15 = false;
+                    bbtn12 = false;
+                    bbtn1 = false;
+                    bbtn20 = false;
+                    ibtn15.setImageResource(R.drawable.plus_sign);
+                    ibtn12.setImageResource(R.drawable.plus_sign);
+                    ibtn1.setImageResource(R.drawable.plus_sign);
+                    ibtn20.setImageResource(R.drawable.plus_sign);
+                    ibtn5.setImageResource(R.drawable.green_circle);
+                    bbtn5=true;
+                }
+            }
+        });
+
+        ibtn12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bbtn12 == false && checked == false) {
+                    ibtn12.setImageResource(R.drawable.green_circle);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    checked = true;
+                    bbtn12=true;
+                } else if(bbtn12 == true && checked == true) {
+                    ibtn12.setImageResource(R.drawable.plus_sign);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
+                    checked = false;
+                    bbtn12=false;
+                } else if(bbtn12 == false && checked == true){
+                    bbtn15 = false;
+                    bbtn1 = false;
+                    bbtn5 = false;
+                    bbtn20 = false;
+                    ibtn15.setImageResource(R.drawable.plus_sign);
+                    ibtn1.setImageResource(R.drawable.plus_sign);
+                    ibtn5.setImageResource(R.drawable.plus_sign);
+                    ibtn20.setImageResource(R.drawable.plus_sign);
+                    ibtn12.setImageResource(R.drawable.green_circle);
+                    bbtn12=true;
+                }
+            }
+        });
+
+        ibtn15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bbtn15 == false && checked == false) {
+                    ibtn15.setImageResource(R.drawable.green_circle);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    checked = true;
+                    bbtn15=true;
+                } else if(bbtn15 == true && checked == true) {
+                    ibtn15.setImageResource(R.drawable.plus_sign);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
+                    checked = false;
+                    bbtn15=false;
+                } else if(bbtn15 == false && checked == true){
+                    bbtn1 = false;
+                    bbtn12 = false;
+                    bbtn5 = false;
+                    bbtn20 = false;
+                    ibtn1.setImageResource(R.drawable.plus_sign);
+                    ibtn12.setImageResource(R.drawable.plus_sign);
+                    ibtn5.setImageResource(R.drawable.plus_sign);
+                    ibtn20.setImageResource(R.drawable.plus_sign);
+                    ibtn15.setImageResource(R.drawable.green_circle);
+                    bbtn15=true;
+                }
+            }
+        });
+
+        ibtn20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bbtn20 == false && checked == false) {
+                    ibtn20.setImageResource(R.drawable.green_circle);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    checked = true;
+                    bbtn20=true;
+                } else if(bbtn20 == true && checked == true) {
+                    ibtn20.setImageResource(R.drawable.plus_sign);
+                    join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
+                    checked = false;
+                    bbtn20=false;
+                } else if(bbtn20 == false && checked == true){
+                    bbtn15 = false;
+                    bbtn12 = false;
+                    bbtn5 = false;
+                    bbtn1 = false;
+                    ibtn15.setImageResource(R.drawable.plus_sign);
+                    ibtn12.setImageResource(R.drawable.plus_sign);
+                    ibtn5.setImageResource(R.drawable.plus_sign);
+                    ibtn1.setImageResource(R.drawable.plus_sign);
+                    ibtn20.setImageResource(R.drawable.green_circle);
+                    bbtn20=true;
+                }
+            }
+        });
+
 
     }
 

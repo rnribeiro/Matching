@@ -34,9 +34,6 @@ public class Field {
         this.available_capacity = available_capacity;
         this.available = available;
 
-        if S
-
-
     }
 
     public int getId() {
