@@ -10,6 +10,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Matching">
         <activity
+                android:name=".PayUsing"
+                android:exported="true"/>
+        <activity
+                android:name=".Successful"
+                android:exported="true"/>
+        <activity
+                android:name=".FunctionalityNotImplemented"
+                android:exported="true"/>
+        <activity
                 android:name=".FriendsDetailActivity"
                 android:exported="true"/>
         <activity

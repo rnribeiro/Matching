@@ -75,7 +75,8 @@
 
             <ListView
                     android:layout_width="match_parent"
-                    android:layout_height="537dp" android:id="@+id/fieldsListView">
+                    android:layout_height="537dp"
+                    android:id="@+id/fieldsListView">
             </ListView>
             <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
