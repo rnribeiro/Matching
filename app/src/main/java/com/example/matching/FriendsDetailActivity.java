@@ -38,7 +38,7 @@ public class FriendsDetailActivity extends AppCompatActivity {
         see_events_friend_detail_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent see_friend_events_activity = new Intent(getApplicationContext(), FirendEvents.class);
+                Intent see_friend_events_activity = new Intent(getApplicationContext(), FriendEvents.class);
                 see_friend_events_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(see_friend_events_activity);
                 overridePendingTransition(0,0);
@@ -72,7 +72,7 @@ public class FriendsDetailActivity extends AppCompatActivity {
 
                 // TODO: 09/05/2022 maybe implement this
 
-                Intent see_friend_events_activity = new Intent(getApplicationContext(), FirendEvents.class);
+                Intent see_friend_events_activity = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
                 see_friend_events_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(see_friend_events_activity);
                 overridePendingTransition(0,0);
