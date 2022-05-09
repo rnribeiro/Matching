@@ -10,6 +10,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Matching">
         <activity
+                android:name=".NoEvents"
+                android:exported="true"/>
+        <activity
+                android:name=".FirendEvents"
+                android:exported="true"/>
+        <activity
                 android:name=".PayUsing"
                 android:exported="true"/>
         <activity
