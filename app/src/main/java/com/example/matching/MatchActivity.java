@@ -114,7 +114,7 @@ public class MatchActivity extends AppCompatActivity {
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                filterHidden=false;
+                filterHidden=true;
                 hideFilter();
                 switch (tab.getPosition()) {
                     case 0:
@@ -146,7 +146,7 @@ public class MatchActivity extends AppCompatActivity {
         fieldsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                filterHidden = false;
+                filterHidden = true;
                 hideFilter();
                 Field selectField = (Field) (fieldsListView.getItemAtPosition(position));
                 if (selectField.getMatching_type().equals("Rent")){

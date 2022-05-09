@@ -25,11 +25,14 @@ public class FieldAdapter extends ArrayAdapter<Field> {
         if(convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.field_cell, parent, false);
         }
-        TextView tv = (TextView) convertView.findViewById(R.id.cell_field_name);
-        ImageView iv = (ImageView) convertView.findViewById(R.id.cell_field_image);
-
-        tv.setText(field.getName());
-        iv.setImageResource(field.getImage());
+        TextView cell_field_name = (TextView) convertView.findViewById(R.id.cell_field_name);
+        ImageView cell_field_image = (ImageView) convertView.findViewById(R.id.cell_field_image);
+        TextView location_cell_text = convertView.findViewById(R.id.location_cell_text);
+        TextView time_cell_text = convertView.findViewById(R.id.time_cell_text);
+        cell_field_name.setText(field.getName());
+        cell_field_image.setImageResource(field.getImage());
+        location_cell_text.setText(field.getLocation());
+        time_cell_text.setText("Time: 18:00 - 19:00");
 
         return convertView;
     }

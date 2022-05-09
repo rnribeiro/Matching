@@ -30,15 +30,15 @@
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/timeTextView"
+            android:layout_height="wrap_content" android:id="@+id/time_cell_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.504" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.747"/>
+            app:layout_constraintHorizontal_bias="0.747" android:textAlignment="center"/>
     <TextView
             android:text="Location: "
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/LocationTextView"
+            android:layout_height="wrap_content" android:id="@+id/location_cell_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.828" app:layout_constraintStart_toStartOf="parent"
