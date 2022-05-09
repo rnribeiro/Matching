@@ -15,6 +15,10 @@ public class FindDetailActivity extends AppCompatActivity {
 
     LinearLayout find_LL_1st_left, find_LL_2nd_left,find_LL_3rd_left, find_LL_4rd_left, find_LL_5th_left;
     LinearLayout find_LL_1st_right, find_LL_2nd_right,find_LL_3rd_right, find_LL_4th_right, find_LL_5th_right;
+    ImageView left_field, right_field;
+    ImageButton ibtn1, ibtn2, ibtn3, ibtn4, ibtn5, ibtn6, ibtn7, ibtn8, ibtn9, ibtn10, ibtn11, ibtn12, ibtn13, ibtn14, ibtn15, ibtn16, ibtn17, ibtn18, ibtn19, ibtn20, ibtn21, ibtn22;
+    Boolean bbtn1= false; Boolean bbtn2= false; Boolean bbtn3= false; Boolean bbtn4= false; Boolean bbtn5= false; Boolean bbtn6= false; Boolean bbtn7= false; Boolean bbtn8= false; Boolean bbtn9= false; Boolean bbtn10= false; Boolean bbtn11= false; Boolean bbtn12= false; Boolean bbtn13= false; Boolean bbtn14= false; Boolean bbtn15= false; Boolean bbtn16= false; Boolean bbtn17= false; Boolean bbtn18= false; Boolean bbtn19= false; Boolean bbtn20= false; Boolean bbtn21= false; Boolean bbtn22 = false;
+
 
 //    ImageButton findImageButton1,
 //    findImageButton2,
@@ -79,6 +83,32 @@ public class FindDetailActivity extends AppCompatActivity {
         rows.add(find_LL_3rd_right);
         rows.add(find_LL_4th_right);
         rows.add(find_LL_5th_right);
+
+        left_field = findViewById(R.id.left_field_image);
+        right_field = findViewById(R.id.right_field_image);
+
+        ibtn1 = (ImageButton)findViewById(R.id.findImageButton1);
+        ibtn2 = (ImageButton)findViewById(R.id.findImageButton2);
+        ibtn3 = (ImageButton)findViewById(R.id.findImageButton3);
+        ibtn4 = (ImageButton)findViewById(R.id.findImageButton4);
+        ibtn5 = (ImageButton)findViewById(R.id.findImageButton5);
+        ibtn6 = (ImageButton)findViewById(R.id.findImageButton6);
+        ibtn7 = (ImageButton)findViewById(R.id.findImageButton7);
+        ibtn8 = (ImageButton)findViewById(R.id.findImageButton8);
+        ibtn9 = (ImageButton)findViewById(R.id.findImageButton9);
+        ibtn10 = (ImageButton)findViewById(R.id.findImageButton10);
+        ibtn11 = (ImageButton)findViewById(R.id.findImageButton11);
+        ibtn12= (ImageButton)findViewById(R.id.findImageButton12);
+        ibtn13 = (ImageButton)findViewById(R.id.findImageButton13);
+        ibtn14 = (ImageButton)findViewById(R.id.findImageButton14);
+        ibtn15 = (ImageButton)findViewById(R.id.findImageButton15);
+        ibtn16 = (ImageButton)findViewById(R.id.findImageButton16);
+        ibtn17 = (ImageButton)findViewById(R.id.findImageButton17);
+        ibtn18 = (ImageButton)findViewById(R.id.findImageButton18);
+        ibtn19 = (ImageButton)findViewById(R.id.findImageButton19);
+        ibtn20 = (ImageButton)findViewById(R.id.findImageButton20);
+        ibtn21 = (ImageButton)findViewById(R.id.findImageButton21);
+        ibtn22 = (ImageButton)findViewById(R.id.findImageButton22);
 
 
         ImageButton findImageButton1 = findViewById(R.id.findImageButton1);
@@ -149,6 +179,8 @@ public class FindDetailActivity extends AppCompatActivity {
             find_LL_3rd_right.setVisibility(View.VISIBLE);
 
             find_LL_5th_right.setVisibility(View.VISIBLE);
+            left_field.setImageResource(R.drawable.basket_field);
+            right_field.setImageResource(R.drawable.basket_field);
 
 
 
