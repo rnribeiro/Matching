@@ -261,5 +261,7 @@ public class FindDetailActivity extends AppCompatActivity {
         find_dtl_field_image.setImageResource(selectedField.getImage());
         find_dtl_time_text_view.setText("Time: 18:00 - 19:00");
         find_dtl_location_text_view.setText(selectedField.getLocation());
+
+
     }
 }

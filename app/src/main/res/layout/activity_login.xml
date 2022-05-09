@@ -59,4 +59,10 @@
             app:layout_constraintStart_toStartOf="@+id/password_input"
             app:layout_constraintVertical_bias="0.804"
             android:textColor="#000000" android:textSize="20sp"/>
+    <Button
+            android:text="Go to friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/go_to_friends"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/do_login_btn"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
