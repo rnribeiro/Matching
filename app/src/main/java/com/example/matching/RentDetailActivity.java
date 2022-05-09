@@ -14,6 +14,7 @@ public class RentDetailActivity extends AppCompatActivity {
     Button back_from_rent_dtl_btn, rent_btn_dtl;
     LinearLayout rent_LL_1st_left, rent_LL_2nd_left,rent_LL_3rd_left, rent_LL_4rd_left, rent_LL_5th_left;
     LinearLayout rent_LL_1st_right, rent_LL_2nd_right,rent_LL_3rd_right, rent_LL_4th_right, rent_LL_5th_right;
+    ImageView left_field, right_field;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,8 @@ public class RentDetailActivity extends AppCompatActivity {
         rent_LL_3rd_right = findViewById(R.id.rent_LL_3rd_right);
         rent_LL_4th_right = findViewById(R.id.rent_LL_4th_right);
         rent_LL_5th_right = findViewById(R.id.rent_LL_5th_right);
+        left_field = findViewById(R.id.left_field_image);
+        right_field = findViewById(R.id.right_field_image);
     }
 
     private void changeRows() {
@@ -63,6 +66,8 @@ public class RentDetailActivity extends AppCompatActivity {
             rent_LL_3rd_right.setVisibility(View.VISIBLE);
 
             rent_LL_5th_right.setVisibility(View.VISIBLE);
+            left_field.setImageResource(R.drawable.basket_field);
+            right_field.setImageResource(R.drawable.basket_field);
 
 
 
@@ -75,6 +80,8 @@ public class RentDetailActivity extends AppCompatActivity {
             rent_LL_4th_right.setVisibility(View.GONE);
             rent_LL_5th_left.setVisibility(View.GONE);
             rent_LL_5th_right.setVisibility(View.GONE);
+            left_field.setImageResource(R.drawable.tenis_field);
+            right_field.setImageResource(R.drawable.tenis_field);
 
 
             if (selectedField.getCapacity()==2){
