@@ -24,7 +24,6 @@ public class FriendsActivity extends AppCompatActivity {
 
         friendsListView = (ListView) findViewById(R.id.friendsListView);
 
-        friendsListView = (ListView) findViewById(R.id.friendsListView);
         FriendsAdapter adapter = new FriendsAdapter(getApplicationContext(), 0, friendsList);
         friendsListView.setAdapter(adapter);
 
@@ -38,16 +37,19 @@ public class FriendsActivity extends AppCompatActivity {
             }
         });
 
+
+
+
     }
 
     private void createUsers(){
-        User user1 = new User("Jon Doe", R.drawable.logo);
-        User user2 = new User("Jane Doe", R.drawable.logo);
-        User user3 = new User("Jack Knife", R.drawable.logo);
-        User user4 = new User("Jane Knife", R.drawable.logo);
-        User user5 = new User("Justin Bieber", R.drawable.logo);
-        User user6 = new User("Hanna Montana", R.drawable.logo);
-        User user7 = new User("Fredy Mercury", R.drawable.logo);
+        User user1 = new User("Jon Doe", R.drawable.dunkey);
+        User user2 = new User("Jane Doe", R.drawable.dunkey);
+        User user3 = new User("Jack Knife", R.drawable.dunkey);
+        User user4 = new User("Jane Knife", R.drawable.dunkey);
+        User user5 = new User("Justin Bieber", R.drawable.dunkey);
+        User user6 = new User("Hanna Montana", R.drawable.dunkey);
+        User user7 = new User("Fredy Mercury", R.drawable.dunkey);
 
     }
 }

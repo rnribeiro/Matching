@@ -1,6 +1,8 @@
 package com.example.matching;
 
 import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,13 +10,82 @@ import android.os.Bundle;
 
 public class FriendsDetailActivity extends AppCompatActivity {
     User selectedUser;
+
+    Button see_events_friend_detail_btn, invite_friend_detail_btn, message_friend_detail_btn, remove_friend_detail_btn, back_friend_detail_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends_detail);
+        initializeButtons();
+        getSelectedUser();
+        setValues();
+        setOnClickListeners();
+    }
 
-       getSelectedUser();
-       setValues();
+    private void initializeButtons() {
+
+        see_events_friend_detail_btn = findViewById(R.id.see_events_friend_detail_btn);
+        invite_friend_detail_btn = findViewById(R.id.invite_friend_detail_btn);
+        message_friend_detail_btn = findViewById(R.id.message_friend_detail_btn);
+        remove_friend_detail_btn = findViewById(R.id.remove_friend_detail_btn);
+        back_friend_detail_btn = findViewById(R.id.back_friend_detail_btn);
+
+    }
+
+    private void setOnClickListeners() {
+
+        see_events_friend_detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent see_friend_events_activity = new Intent(getApplicationContext(), FriendEvents.class);
+                see_friend_events_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(see_friend_events_activity);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        invite_friend_detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent see_friend_events_activity = new Intent(getApplicationContext(), NoEvents.class);
+                see_friend_events_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(see_friend_events_activity);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        message_friend_detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: 09/05/2022 maybe pop-up
+                Intent see_friend_events_activity = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                see_friend_events_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(see_friend_events_activity);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        remove_friend_detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // TODO: 09/05/2022 maybe implement this
+
+                Intent see_friend_events_activity = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                see_friend_events_activity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(see_friend_events_activity);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        back_friend_detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
     }
 
     private void getSelectedUser() {
@@ -24,15 +95,10 @@ public class FriendsDetailActivity extends AppCompatActivity {
     }
 
     private void setValues() {
-//        TextView rent_dtl_field_name = (TextView) findViewById(R.id.rent_dtl_field_name);
-//        ImageView rent_dtl_field_image = (ImageView) findViewById(R.id.rent_dtl_field_image);
-//        TextView rent_dtl_time_text_view = findViewById(R.id.rent_dtl_time_text_view);
-//        TextView rent_dtl_location_text_view = findViewById(R.id.rent_dtl_location_text_view);
-//
-//
-//        rent_dtl_field_name.setText(selectedField.getName());
-//        rent_dtl_field_image.setImageResource(selectedField.getImage());
-//        rent_dtl_time_text_view.setText("Time: 18:00 - 19:00");
-//        rent_dtl_location_text_view.setText(selectedField.getLocation());
+        TextView friend_name_textview = (TextView) findViewById(R.id.friend_name_textview);
+        ImageView photo_friend_imageview = (ImageView) findViewById(R.id.photo_friend_imageview);
+
+        friend_name_textview.setText(selectedUser.getName());
+        photo_friend_imageview.setImageResource(selectedUser.getPhoto());
     }
 }

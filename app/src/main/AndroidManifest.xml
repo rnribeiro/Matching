@@ -10,11 +10,32 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Matching">
         <activity
-                android:name=".FriendsDetailActivity"
+                android:name=".NoEvents"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".FriendEvents"
                 android:exported="true"/>
         <activity
-                android:name=".FriendsAdapter"
+                android:name=".PayUsing"
                 android:exported="true"/>
+        <activity
+                android:name=".Successful"
+                android:exported="true"/>
+        <activity
+                android:name=".FunctionalityNotImplemented"
+                android:exported="true"/>
+        <activity
+                android:name=".FriendsDetailActivity"
+                android:exported="true"/>
+<!--        <activity-->
+<!--                android:name=".FriendsAdapter"-->
+<!--                android:exported="true"/>-->
         <activity
                 android:name=".FriendsActivity"
                 android:exported="true"/>
@@ -29,15 +50,17 @@
                 android:exported="true"/>
         <activity
                 android:name=".LoginActivity"
-                android:exported="true"/>
+                android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        </activity>
         <activity
                 android:name=".MainActivity"
                 android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
     </application>
 

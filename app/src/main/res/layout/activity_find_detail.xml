@@ -277,14 +277,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.136" app:layout_constraintVertical_bias="0.932"/>
+                app:layout_constraintHorizontal_bias="0.136" app:layout_constraintVertical_bias="0.932"
+                android:backgroundTint="#37A82A" android:textSize="16sp"/>
         <Button
                 android:text="Join"
                 android:layout_width="160dp"
                 android:layout_height="60dp" android:id="@+id/join_btn_dtl"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"/>
+                app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"
+                android:backgroundTint="#37A82A" android:textSize="16sp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
