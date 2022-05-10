@@ -62,7 +62,6 @@
             android:layout_width="88dp"
             android:layout_height="71dp"
             android:clickable="true"
-            app:srcCompat="@drawable/plus_sign"
             android:id="@+id/add_events_float_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

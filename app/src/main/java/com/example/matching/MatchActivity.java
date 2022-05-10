@@ -23,10 +23,11 @@ public class MatchActivity extends AppCompatActivity {
     private ListView fieldsListView;
     private CardView cardView;
     boolean filterHidden = true;
-    private Button filterButton, allButtonFilter, footballButtonFilter, basketballButtonFilter, tennisButtonFilter;
+    private Button filterButton, allButtonFilter, footballButtonFilter, basketballButtonFilter, tennisButtonFilter, locationFilterButton;
     private ArrayList<String> selectedFilters = new ArrayList<String>();
+    private String selectedLocation;
+
     private TabLayout tabs;
-    Boolean footclicked = false; Boolean basketclicked = false; Boolean tenisclicked = false;
     private String current_matching_type;
 
     @Override
@@ -43,6 +44,9 @@ public class MatchActivity extends AppCompatActivity {
         setUpListRent();
         current_matching_type = "Rent";
 
+        unSelectAllFilterButtons();
+        lookSelected(allButtonFilter);
+
     }
 
     private void inititateWidgets() {
@@ -54,13 +58,14 @@ public class MatchActivity extends AppCompatActivity {
         tabs = findViewById(R.id.tabLayout);
         cardView = findViewById(R.id.cardView);
         fieldsListView = (ListView) findViewById(R.id.fieldsListView);
+        locationFilterButton = findViewById(R.id.locationFilterButton);
 
     }
 
     private void createFields() {
         Field field1 = new Field("Field A", R.drawable.logo, "Lisbon", "Football", "Rent", 22, 22, true);
         addToLists(field1);
-        Field field2 = new Field("Field B", R.drawable.logo, "Porto", "Basketball", "Find", 22, 22, true);
+        Field field2 = new Field("Field B", R.drawable.logo, "Porto", "Basketball", "Find", 10, 22, true);
         addToLists(field2);
         Field field3 = new Field("Field C", R.drawable.logo, "Faro", "Tennis", "Rent", 2, 2, true);
         addToLists(field3);
@@ -68,9 +73,9 @@ public class MatchActivity extends AppCompatActivity {
         addToLists(field4);
         Field field5 = new Field("Field E", R.drawable.logo, "Beja","Tennis", "Rent", 4, 4, true);
         addToLists(field5);
-        Field field6 = new Field("Field F", R.drawable.logo, "Coimbra","Basketball", "Tournament", 22, 22, true);
+        Field field6 = new Field("Field F", R.drawable.logo, "Coimbra","Basketball", "Tournament", 10, 22, true);
         addToLists(field6);
-        Field field7 = new Field("Field G", R.drawable.logo, "Coimbra","Basketball", "Rent", 22, 22, true);
+        Field field7 = new Field("Field G", R.drawable.logo, "Coimbra","Basketball", "Rent", 10, 22, true);
         addToLists(field7);
 
     }
@@ -199,30 +204,40 @@ public class MatchActivity extends AppCompatActivity {
         footballButtonFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    filterList("football",footballButtonFilter);
+
                     lookSelected(footballButtonFilter);
                     lookUnSelected(allButtonFilter);
-                    footclicked=true;
+                    filterList("football",footballButtonFilter);
+
             }
         });
         basketballButtonFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    filterList("basketball",basketballButtonFilter);
+
                     lookSelected(basketballButtonFilter);
                     lookUnSelected(allButtonFilter);
+                    filterList("basketball",basketballButtonFilter);
+
             }
         });
         tennisButtonFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    filterList("tennis",tennisButtonFilter);
+
                     lookSelected(tennisButtonFilter);
                     lookUnSelected(allButtonFilter);
-                    tenisclicked=true;
+                    filterList("tennis",tennisButtonFilter);
+
             }
         });
 
+        locationFilterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 
@@ -232,33 +247,47 @@ public class MatchActivity extends AppCompatActivity {
         lookUnSelected(tennisButtonFilter);
     }
 
-    private int white, darkGray, red;
-
-    private void initColors() {
-        white = ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary);
-        red = ContextCompat.getColor(getApplicationContext(), R.color.red);
-        darkGray = ContextCompat.getColor(getApplicationContext(), R.color.darkerGray);
-    }
-
     private void lookSelected(Button parsedButton) {
        parsedButton.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-       parsedButton.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary_dark));
+       parsedButton.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.green));
     }
 
     private void lookUnSelected(Button parsedButton) {
-        parsedButton.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-        parsedButton.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+        parsedButton.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.green));
+        parsedButton.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
     }
 
-
     private void filterList(String sport, Button bt) {
-        if (sport != null && !selectedFilters.contains(sport))
+        if (sport != null && !selectedFilters.contains(sport)) {
             selectedFilters.add(sport);
+
+            filter();
+        }
         else {
             selectedFilters.remove(sport);
             lookUnSelected(bt);
-        }
+            filter();
 
+            if (selectedFilters.isEmpty()) {
+                lookSelected(allButtonFilter);
+
+                switch (current_matching_type) {
+                    case "Rent":
+                        setUpListRent();
+                        break;
+
+                    case "Find":
+                        setUpListFind();
+                        break;
+                    case "Tournament":
+                        setUpListTournament();
+                        break;
+                }
+            }
+        }
+    }
+
+    public void filter(){
         ArrayList<Field> filteredFields = new ArrayList<Field>();
 
         for (Field field : FieldList) {
@@ -272,11 +301,13 @@ public class MatchActivity extends AppCompatActivity {
         setAdapter(filteredFields);
     }
 
+
     private void setAdapter(ArrayList<Field> fieldList) {
         fieldsListView = (ListView) findViewById(R.id.fieldsListView);
         FieldAdapter adapter = new FieldAdapter(getApplicationContext(), 0, fieldList);
         fieldsListView.setAdapter(adapter);
     }
+
     private void hideFilter() {
         cardView.setVisibility(View.GONE);
         filterButton.setText("FILTER");

@@ -5,6 +5,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import com.google.android.material.snackbar.Snackbar;
 
 public class RentDetailActivity extends AppCompatActivity {
     Field selectedField;
@@ -151,7 +152,11 @@ public class RentDetailActivity extends AppCompatActivity {
         rent_btn_dtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                Intent confirm_rent = new Intent(getApplicationContext(), Successful.class);
+                confirm_rent.putExtra("type", "Rent");
+                confirm_rent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(confirm_rent);
+                overridePendingTransition(0, 0);
             }
         });
 

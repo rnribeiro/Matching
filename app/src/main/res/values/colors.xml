@@ -13,4 +13,7 @@
     <color name="colorAccent">#EEEEEE</color>
     <color name="darkerGray">#DDDDDD</color>
     <color name="red">#8B0000</color>
+
+    <color name="green">#37A82A</color>
+
 </resources>

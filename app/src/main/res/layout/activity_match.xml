@@ -81,7 +81,7 @@
             <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" app:cardCornerRadius="10dp"
-                    android:layout_alignParentRight="true" android:visibility="gone" android:id="@+id/cardView">
+                    android:layout_alignParentRight="true" android:id="@+id/cardView">
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="wrap_content"
@@ -166,7 +166,7 @@
                             android:gravity="center">
                         <Button
                                 android:text="Location"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" android:id="@+id/locationFilterButton"
                                 android:gravity="center"/>
                     </LinearLayout>

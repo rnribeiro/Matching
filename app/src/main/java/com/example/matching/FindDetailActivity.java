@@ -7,6 +7,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.core.content.ContextCompat;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -54,6 +55,7 @@ public class FindDetailActivity extends AppCompatActivity {
         initializeWidgets();
         getSelectedField();
         setValues();
+        changeRows();
         setOnClickListeners();
         join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
         join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
@@ -115,53 +117,7 @@ public class FindDetailActivity extends AppCompatActivity {
 
 
         ImageButton findImageButton1 = findViewById(R.id.findImageButton1);
-        String set = "" + findImageButton1.getImportantForAccessibility();
 
-        Log.i("set: " , set);
-//        ImageButton findImageButton2 = findViewById(R.id.findImageButton2);
-//        ImageButton findImageButton3 = findViewById(R.id.findImageButton3);
-//        ImageButton findImageButton4 = findViewById(R.id.findImageButton4);
-//        ImageButton findImageButton5 = findViewById(R.id.findImageButton5);
-//        ImageButton findImageButton6 = findViewById(R.id.findImageButton6);
-//        ImageButton findImageButton7 = findViewById(R.id.findImageButton7);
-//        ImageButton findImageButton8 = findViewById(R.id.findImageButton8);
-//        ImageButton findImageButton9 = findViewById(R.id.findImageButton9);
-//        ImageButton findImageButton10 = findViewById(R.id.findImageButton10);
-//        ImageButton findImageButton11 = findViewById(R.id.findImageButton11);
-//        ImageButton findImageButton12 = findViewById(R.id.findImageButton12);
-//        ImageButton findImageButton13 = findViewById(R.id.findImageButton13);
-//        ImageButton findImageButton14 = findViewById(R.id.findImageButton14);
-//        ImageButton findImageButton15 = findViewById(R.id.findImageButton15);
-//        ImageButton findImageButton16 = findViewById(R.id.findImageButton16);
-//        ImageButton findImageButton17 = findViewById(R.id.findImageButton17);
-//        ImageButton findImageButton18 = findViewById(R.id.findImageButton18);
-//        ImageButton findImageButton19 = findViewById(R.id.findImageButton19);
-//        ImageButton findImageButton20 = findViewById(R.id.findImageButton20);
-//        ImageButton findImageButton21 = findViewById(R.id.findImageButton21);
-//        ImageButton findImageButton22 = findViewById(R.id.findImageButton22);
-//
-//        imageButtons.add(findImageButton1);
-//        imageButtons.add(findImageButton2);
-//        imageButtons.add(findImageButton3);
-//        imageButtons.add(findImageButton4);
-//        imageButtons.add(findImageButton5);
-//        imageButtons.add(findImageButton6);
-//        imageButtons.add(findImageButton7);
-//        imageButtons.add(findImageButton8);
-//        imageButtons.add(findImageButton9);
-//        imageButtons.add(findImageButton10);
-//        imageButtons.add(findImageButton11);
-//        imageButtons.add(findImageButton12);
-//        imageButtons.add(findImageButton13);
-//        imageButtons.add(findImageButton14);
-//        imageButtons.add(findImageButton15);
-//        imageButtons.add(findImageButton16);
-//        imageButtons.add(findImageButton17);
-//        imageButtons.add(findImageButton18);
-//        imageButtons.add(findImageButton19);
-//        imageButtons.add(findImageButton20);
-//        imageButtons.add(findImageButton21);
-//        imageButtons.add(findImageButton22);
 
     }
 
@@ -239,11 +195,21 @@ public class FindDetailActivity extends AppCompatActivity {
         join_btn_dtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(checked==true){
-                    finish();
+                if(checked==false){
+                    Snackbar.make(v, "Please select a position!!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                } else {
+
+                    Intent confirm_join = new Intent(getApplicationContext(), Successful.class);
+                    confirm_join.putExtra("type", "Join");
+                    confirm_join.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(confirm_join);
+                    overridePendingTransition(0, 0);
                 }
             }
         });
+
+
 
         ibtn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -251,7 +217,7 @@ public class FindDetailActivity extends AppCompatActivity {
                 if (bbtn1 == false && checked == false) {
                     ibtn1.setImageResource(R.drawable.green_circle);
                     join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.green));
                     checked = true;
                     bbtn1=true;
                 } else if(bbtn1 == true && checked == true) {
@@ -281,7 +247,7 @@ public class FindDetailActivity extends AppCompatActivity {
                 if (bbtn5 == false && checked == false) {
                     ibtn5.setImageResource(R.drawable.green_circle);
                     join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.green));
                     checked = true;
                     bbtn5=true;
                 } else if(bbtn5 == true && checked == true) {
@@ -311,7 +277,7 @@ public class FindDetailActivity extends AppCompatActivity {
                 if (bbtn12 == false && checked == false) {
                     ibtn12.setImageResource(R.drawable.green_circle);
                     join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.green));
                     checked = true;
                     bbtn12=true;
                 } else if(bbtn12 == true && checked == true) {
@@ -341,7 +307,7 @@ public class FindDetailActivity extends AppCompatActivity {
                 if (bbtn15 == false && checked == false) {
                     ibtn15.setImageResource(R.drawable.green_circle);
                     join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.green));
                     checked = true;
                     bbtn15=true;
                 } else if(bbtn15 == true && checked == true) {
@@ -371,7 +337,7 @@ public class FindDetailActivity extends AppCompatActivity {
                 if (bbtn20 == false && checked == false) {
                     ibtn20.setImageResource(R.drawable.green_circle);
                     join_btn_dtl.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
+                    join_btn_dtl.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.green));
                     checked = true;
                     bbtn20=true;
                 } else if(bbtn20 == true && checked == true) {

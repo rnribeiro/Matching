@@ -38,8 +38,7 @@ public class NoEvents extends AppCompatActivity {
 
 
 
-                Snackbar.make(v, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
 
