@@ -8,172 +8,289 @@
         tools:context=".MatchActivity" android:backgroundTint="#FFFFFF" android:background="#FFFFFF"
         android:backgroundTintMode="src_over">
 
-    <ImageView
-            android:src="@drawable/logo"
-            android:layout_width="215dp"
-            android:layout_height="50dp" android:id="@+id/logo_img_view"
-            android:layout_gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.023"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
-    <ImageButton
-            android:src="@drawable/menu_icon"
-            android:layout_width="55dp"
-            android:layout_height="50dp" android:id="@+id/menu_icon_btn"
-            android:background="#00FFFFFF"
-            tools:ignore="SpeakableTextPresentCheck"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.081"
-            app:layout_constraintVertical_bias="0.023"/>
-    <com.google.android.material.tabs.TabLayout
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.125" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:id="@+id/tabLayout" app:tabIndicatorColor="#37A82A"
-            app:tabSelectedTextColor="#1C5716">
+            android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rent" android:id="@+id/rent_tab"/>
-
-        <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Find" android:id="@+id/find_tab"/>
-
-        <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tournament" android:id="@+id/tournament_tab"/>
-    </com.google.android.material.tabs.TabLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:context=".MainActivity"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0">
-
-
-        <Button
-                android:id="@+id/filterButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="5dp"
-                android:text="Filter"
-                android:textSize="22sp" android:backgroundTint="#37A82A"/>
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <ListView
+            <ImageButton
+                    android:src="@drawable/menu_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp" android:id="@+id/menu_icon_btn"
+                    android:background="#00FFFFFF"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    tools:layout_editor_absoluteY="16dp" tools:layout_editor_absoluteX="29dp"/>
+            <ImageView
+                    android:src="@drawable/logo"
+                    android:layout_width="215dp"
+                    android:layout_height="50dp" android:id="@+id/logo_img_view"
+                    android:layout_gravity="center"
+                    tools:layout_editor_absoluteY="16dp" tools:layout_editor_absoluteX="98dp"/>
+            <com.google.android.material.tabs.TabLayout
                     android:layout_width="match_parent"
-                    android:layout_height="537dp"
-                    android:id="@+id/fieldsListView">
-            </ListView>
-            <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" app:cardCornerRadius="10dp"
-                    android:layout_alignParentRight="true" android:id="@+id/cardView">
-                <LinearLayout
-                        android:orientation="horizontal"
+                    android:layout_height="60dp"
+                    android:id="@+id/tabLayout" app:tabIndicatorColor="#37A82A"
+                    app:tabSelectedTextColor="#1C5716" tools:layout_editor_absoluteY="84dp">
+
+                <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/filterLayout"
-                        android:baselineAligned="false"
-                        android:layout_gravity="right|top" android:background="#D1CAC7"
-                        android:gravity="top">
-                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:text="Rent" android:id="@+id/rent_tab"/>
+
+                <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Find" android:id="@+id/find_tab"/>
+
+                <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tournament" android:id="@+id/tournament_tab"/>
+            </com.google.android.material.tabs.TabLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:context=".MainActivity"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteY="144dp">
+
+
+                <Button
+                        android:id="@+id/filterButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="5dp"
+                        android:text="Filter"
+                        android:textSize="22sp" android:backgroundTint="#37A82A"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <ListView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:id="@+id/sportsFilterLayout" android:layout_weight="0">
+                            android:layout_height="537dp"
+                            android:id="@+id/fieldsListView">
 
-                        <Button
-                                android:layout_width="match_parent"
-                                android:layout_weight="0"
-                                android:layout_height="wrap_content"
-                                android:text="All"
-                                android:id="@+id/allButtonFilter"/>
-                        <Button
-                                android:layout_width="match_parent"
-                                android:layout_weight="0"
-                                android:layout_height="match_parent"
-                                android:text="Football"
-                                android:id="@+id/footballFilter"
-                        />
-
-                        <Button
-                                android:layout_width="match_parent"
-                                android:layout_weight="1"
-                                android:layout_height="wrap_content"
-                                android:text="Basketball"
-                                android:id="@+id/basketballFilter"
-                        />
-                        <Button
-                                android:layout_width="match_parent"
-                                android:layout_weight="0"
-                                android:layout_height="wrap_content"
-                                android:text="Tennis"
-                                android:id="@+id/tennisFilter"
-                        />
-
-                    </LinearLayout>
-                    <LinearLayout
-                            android:layout_width="98dp"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:id="@+id/timeLayout" android:layout_weight="0"
-                            android:layout_gravity="center">
-
-                        <TextView
-                                android:text="Hour"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" android:id="@+id/hourTextView"
-                                android:layout_weight="0"
-                                android:textAlignment="center" android:textColor="#000000" android:textSize="20sp"/>
-                        <EditText
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="number"
-                                android:ems="10"
-                                android:id="@+id/hourFilterInput" android:layout_weight="0"/>
-                        <TextView
-                                android:text="Minutes"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" android:id="@+id/minutesTextView"
-                                android:layout_weight="0" android:textAlignment="center" android:textColor="#000000"
-                                android:textSize="20sp"/>
-                        <EditText
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="number"
-                                android:ems="10"
-                                android:id="@+id/minutesFilterInput" android:layout_weight="0"/>
-
-                    </LinearLayout>
-                    <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" android:layout_weight="0"
-                            android:id="@+id/LocationFilter"
-                            android:gravity="center">
-                        <Button
-                                android:text="Location"
+                    </ListView>
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" app:cardCornerRadius="10dp"
+                            android:layout_alignParentRight="true" android:id="@+id/cardView">
+                        <LinearLayout
+                                android:orientation="horizontal"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" android:id="@+id/locationFilterButton"
-                                android:gravity="center"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-    </LinearLayout>
+                                android:layout_height="wrap_content" android:id="@+id/filterLayout"
+                                android:baselineAligned="false"
+                                android:layout_gravity="right|top" android:background="#D1CAC7"
+                                android:gravity="top">
+                            <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:id="@+id/sportsFilterLayout" android:layout_weight="0">
+
+                                <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="0"
+                                        android:layout_height="wrap_content"
+                                        android:text="All"
+                                        android:id="@+id/allButtonFilter"/>
+                                <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="0"
+                                        android:layout_height="match_parent"
+                                        android:text="Football"
+                                        android:id="@+id/footballFilter"
+                                />
+
+                                <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="Basketball"
+                                        android:id="@+id/basketballFilter"
+                                />
+                                <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="0"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tennis"
+                                        android:id="@+id/tennisFilter"
+                                />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                    android:layout_width="98dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:id="@+id/timeLayout" android:layout_weight="0"
+                                    android:layout_gravity="center">
+
+                                <TextView
+                                        android:text="Hour"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" android:id="@+id/hourTextView"
+                                        android:layout_weight="0"
+                                        android:textAlignment="center" android:textColor="#000000"
+                                        android:textSize="20sp"/>
+                                <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/hourFilterInput" android:layout_weight="0"/>
+                                <TextView
+                                        android:text="Minutes"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" android:id="@+id/minutesTextView"
+                                        android:layout_weight="0" android:textAlignment="center"
+                                        android:textColor="#000000"
+                                        android:textSize="20sp"/>
+                                <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/minutesFilterInput" android:layout_weight="0"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" android:layout_weight="0"
+                                    android:id="@+id/LocationFilter"
+                                    android:gravity="center">
+                                <Button
+                                        android:text="Location"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" android:id="@+id/locationFilterButton"
+                                        android:gravity="center"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageButton
+                        android:src="@drawable/menu_icon"
+                        android:layout_width="45dp"
+                        android:layout_height="50dp" android:id="@+id/hide_menu_icon_btn"
+                        android:background="#00FFFFFF"
+                        tools:ignore="SpeakableTextPresentCheck"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintVertical_bias="0.025" app:layout_constraintHorizontal_bias="0.85"/>
+                <ImageView
+                        android:src="@drawable/logo"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp" android:id="@+id/menu_logo_img_view"
+                        android:layout_gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintVertical_bias="0.03" app:layout_constraintHorizontal_bias="0.1"/>
+
+
+
+                <Button
+                        android:id="@+id/button_rent"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:backgroundTint="#37A82A"
+                        android:text="Rent"
+                        android:textStyle="normal"
+                        app:iconTint="#673AB7"
+                        android:textAlignment="center"
+                        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.18"/>
+                <Button
+                        android:id="@+id/button_join"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:backgroundTint="#37A82A"
+                        android:text="Join"
+                        android:textAlignment="center"
+                        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.28"/>
+                <Button
+                        android:id="@+id/button_tournaments"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:backgroundTint="#37A82A"
+                        android:text="Tournaments"
+                        android:textAlignment="center"
+                        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.38"/>
+                <Button
+                        android:id="@+id/button_Friends"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:backgroundTint="#37A82A"
+                        android:text="Friends"
+                        android:textAlignment="center"
+                        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.48"/>
+
+                <Button
+                        android:id="@+id/button_account"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:backgroundTint="#37A82A"
+                        android:text="My Account"
+                        android:textAlignment="center"
+                        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.58"/>
+
+                <Button
+                        android:id="@+id/button_logout"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:backgroundTint="#37A82A"
+                        android:text="Log out"
+                        android:textAlignment="center"
+                        app:layout_constraintLeft_toLeftOf="@id/button_account"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintVertical_bias="0.95" app:layout_constraintHorizontal_bias="0"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/button_configuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FDFFFC"
+                        android:clickable="true"
+                        android:src="@drawable/ic_baseline_brightness_5_24"
+                        android:tint="#37A82A"
+                        app:backgroundTint="#FFFEFE"
+                        app:borderWidth="1dp"
+                        app:hoveredFocusedTranslationZ="10dp"
+                        app:pressedTranslationZ="10dp"
+                        app:rippleColor="#37A82A"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.96"
+                        app:layout_constraintHorizontal_bias="0.85"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
