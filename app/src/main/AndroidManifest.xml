@@ -18,9 +18,6 @@
                 android:name=".FriendEvents"
                 android:exported="true"/>
         <activity
-                android:name=".PayUsing"
-                android:exported="true"/>
-        <activity
                 android:name=".Successful"
                 android:exported="true"/>
         <activity

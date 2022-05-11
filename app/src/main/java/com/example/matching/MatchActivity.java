@@ -1,14 +1,17 @@
 package com.example.matching;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -21,7 +24,7 @@ public class MatchActivity extends AppCompatActivity {
     public static ArrayList<Field> findFieldList = new ArrayList<Field>();
     public static ArrayList<Field> tournamentFieldList = new ArrayList<Field>();
     private ListView fieldsListView;
-    private CardView cardView;
+    private CardView filterCardView;
     boolean filterHidden = true;
     private Button filterButton, allButtonFilter, footballButtonFilter, basketballButtonFilter, tennisButtonFilter, locationFilterButton;
     private ArrayList<String> selectedFilters = new ArrayList<String>();
@@ -29,6 +32,7 @@ public class MatchActivity extends AppCompatActivity {
 
     private TabLayout tabs;
     private String current_matching_type;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +45,149 @@ public class MatchActivity extends AppCompatActivity {
 
         createFields();
 
-        setUpListRent();
-        current_matching_type = "Rent";
+
+            Intent last_act = getIntent();
+            String type = last_act.getStringExtra("Type");
+
+            switch (type) {
+                case "Rent":
+                    setUpListRent();
+                    tabs.selectTab(tabs.getTabAt(0));
+                    current_matching_type = "Rent";
+                    break;
+                case "Find":
+                    setUpListFind();
+                    tabs.selectTab(tabs.getTabAt(1));
+                    current_matching_type = "Find";
+                    break;
+                case "Tournament":
+                    setUpListTournament();
+                    tabs.selectTab(tabs.getTabAt(2));
+                    current_matching_type = "Tournament";
+                    break;
+
+            }
+
+
+
+
+
+
 
         unSelectAllFilterButtons();
         lookSelected(allButtonFilter);
 
+        setUpMenu();
+
     }
+
+    private void setUpMenu() {
+        ImageButton menu_icon_btn = findViewById(R.id.menu_icon_btn);
+
+        CardView menuCardView = findViewById(R.id.menuCardView);
+        menu_icon_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menuCardView.setVisibility(v.VISIBLE);
+                menuCardView.bringToFront();
+            }
+        });
+
+        ImageButton hide_menu_icon_btn = findViewById(R.id.hide_menu_icon_btn);
+
+        hide_menu_icon_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
+            }
+        });
+
+        Button button_rent = findViewById(R.id.button_rent);
+        button_rent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                go_to_login.putExtra("Type", "Rent");
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_join = findViewById(R.id.button_join);
+        button_join.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                go_to_login.putExtra("Type", "Find");
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_tournaments = findViewById(R.id.button_tournaments);
+        button_tournaments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                go_to_login.putExtra("Type", "Tournament");
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+
+        Button button_Friends = findViewById(R.id.button_Friends);
+        button_Friends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), FriendsActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_account = findViewById(R.id.button_account);
+        button_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_logout = findViewById(R.id.button_logout);
+        button_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), LoginActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        FloatingActionButton button_configuration = findViewById(R.id.button_configuration);
+        button_configuration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+
+
+
+    }
+
 
     private void inititateWidgets() {
         filterButton = findViewById(R.id.filterButton);
@@ -56,7 +196,7 @@ public class MatchActivity extends AppCompatActivity {
         basketballButtonFilter = findViewById(R.id.basketballFilter);
         tennisButtonFilter = findViewById(R.id.tennisFilter);
         tabs = findViewById(R.id.tabLayout);
-        cardView = findViewById(R.id.cardView);
+        filterCardView = findViewById(R.id.filterCardView);
         fieldsListView = (ListView) findViewById(R.id.fieldsListView);
         locationFilterButton = findViewById(R.id.locationFilterButton);
 
@@ -83,16 +223,20 @@ public class MatchActivity extends AppCompatActivity {
 
 
     private void addToLists(Field field) {
-        FieldList.add(field);
+        if (!FieldList.contains(field))
+            FieldList.add(field);
         switch (field.getMatching_type()) {
             case "Rent":
-                rentFieldList.add(field);
+                if (!rentFieldList.contains(field))
+                    rentFieldList.add(field);
                 break;
             case "Find":
-                findFieldList.add(field);
+                if (!findFieldList.contains(field))
+                    findFieldList.add(field);
                 break;
             case "Tournament":
-                tournamentFieldList.add(field);
+                if (!tournamentFieldList.contains(field))
+                    tournamentFieldList.add(field);
                 break;
         }
     }
@@ -164,6 +308,10 @@ public class MatchActivity extends AppCompatActivity {
                     Intent showDetail = new Intent(getApplicationContext(), FindDetailActivity.class);
                     showDetail.putExtra("id", selectField.getId());
                     startActivity(showDetail);
+                } else {
+                    Intent showDetail = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                showDetail.putExtra("id", selectField.getId());
+                startActivity(showDetail);
                 }
             }
         });
@@ -309,11 +457,11 @@ public class MatchActivity extends AppCompatActivity {
     }
 
     private void hideFilter() {
-        cardView.setVisibility(View.GONE);
+        filterCardView.setVisibility(View.GONE);
         filterButton.setText("FILTER");
     }
     private void showFilter() {
-        cardView.setVisibility(View.VISIBLE);
+        filterCardView.setVisibility(View.VISIBLE);
         filterButton.setText("HIDE");
     }
 

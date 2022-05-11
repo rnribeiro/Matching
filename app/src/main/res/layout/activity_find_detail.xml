@@ -7,287 +7,282 @@
                                                    android:id="@+id/relativeLayout2">
 
 
-    <ImageView
-            android:src="@drawable/logo"
-            android:layout_width="215dp"
-            android:layout_height="50dp" android:id="@+id/logo_img_view"
-            android:layout_gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.023"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
-    <ImageButton
-            android:src="@drawable/menu_icon"
-            android:layout_width="55dp"
-            android:layout_height="50dp" android:id="@+id/menu_icon_btn"
-            android:background="#00FFFFFF"
-            tools:ignore="SpeakableTextPresentCheck"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.081"
-            app:layout_constraintVertical_bias="0.023"/>
-    <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="641dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" android:id="@+id/find_details_layout">
 
-        <ImageView
-                android:id="@+id/find_dtl_field_image"
-                android:layout_width="151dp"
-                android:layout_height="127dp"
-                android:layout_centerVertical="true" android:layout_centerHorizontal="true"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.06"
-                android:clickable="false"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="174dp"
-                android:layout_height="123dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.898"
-                app:layout_constraintVertical_bias="0.059" android:gravity="center" android:id="@+id/linearLayout">
-            <TextView
-                    android:layout_width="153dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/find_dtl_field_name"
-                    android:gravity="center"
-                    android:text="Field Name"
-                    android:textSize="20sp"
-                    android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="641dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" android:id="@+id/find_details_layout"
+                android:layout_alignParentBottom="true">
+
+            <ImageView
+                    android:id="@+id/find_dtl_field_image"
+                    android:layout_width="151dp"
+                    android:layout_height="127dp"
+                    android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.08"
+                    android:clickable="false"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="174dp"
+                    android:layout_height="123dp" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.898"
+                    app:layout_constraintVertical_bias="0.08" android:gravity="center" android:id="@+id/linearLayout">
+                <TextView
+                        android:layout_width="153dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/find_dtl_field_name"
+                        android:gravity="center"
+                        android:text="Field Name"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.19"/>
+                <TextView
+                        android:text="Time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp" android:id="@+id/find_dtl_time_text_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.52"/>
+                <TextView
+                        android:text="Location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp" android:id="@+id/find_dtl_location_text_view"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.846" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                    android:src="@drawable/football_field"
+                    android:layout_width="162dp"
+                    android:layout_height="227dp" android:id="@+id/left_field_image"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.19"/>
-            <TextView
-                    android:text="Time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp" android:id="@+id/find_dtl_time_text_view"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.132"
+                    app:layout_constraintVertical_bias="0.615"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/find_players_left" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.52"/>
-            <TextView
-                    android:text="Location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp" android:id="@+id/find_dtl_location_text_view"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintVertical_bias="0.62">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_5th_left">
+                    <ImageButton
+                            android:src="@drawable/plus_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton1"
+                            android:layout_weight="1" android:background="#00FFFFFF" android:onClick="changeImage"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton2"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_4rd_left">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton3" android:layout_weight="1"
+                            android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton4" android:layout_weight="1"
+                            android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/plus_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton5" android:layout_weight="1"
+                            android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_3rd_left">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton6"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton7"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_2nd_left">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton8" android:layout_weight="1"
+                            android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton9" android:layout_weight="1"
+                            android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton10" android:layout_weight="1"
+                            android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_1st_left">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp" android:id="@+id/findImageButton11"
+                            android:layout_weight="1"
+                            android:background="#00FFFFFF"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                    android:src="@drawable/football_field"
+                    android:layout_width="162dp"
+                    android:layout_height="227dp" android:id="@+id/right_field_image"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.879" app:layout_constraintVertical_bias="0.615"
+                    android:background="#00FFFFFF"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/find_players_right" android:layout_weight="0"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintVertical_bias="0.846" app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.62"
+            >
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_5th_right">
+                    <ImageButton
+                            android:src="@drawable/plus_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton12"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton13"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_4th_right">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton14"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/plus_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton15"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton16"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_3rd_right">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton17"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton18"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_2nd_right">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton19"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/plus_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton20"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" android:id="@+id/findImageButton21"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/find_LL_1st_right">
+                    <ImageButton
+                            android:src="@drawable/user_icon"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp" android:id="@+id/findImageButton22"
+                            android:layout_weight="1" android:background="#00FFFFFF"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                    android:src="@drawable/separator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="247dp" android:id="@+id/separator"
+                    app:layout_constraintStart_toEndOf="@+id/left_field_image"
+                    app:layout_constraintHorizontal_bias="0.434"
+                    app:layout_constraintEnd_toStartOf="@+id/right_field_image"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.615"/>
+            <Button
+                    android:text="Back"
+                    android:layout_width="160dp"
+                    android:layout_height="60dp" android:id="@+id/back_from_find_dtl_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.136" app:layout_constraintVertical_bias="0.932"
+                    android:backgroundTint="#37A82A" android:textSize="16sp"/>
+            <Button
+                    android:text="Join"
+                    android:layout_width="160dp"
+                    android:layout_height="60dp" android:id="@+id/join_btn_dtl"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"
+                    android:backgroundTint="#37A82A" android:textSize="16sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <ImageView
-                android:src="@drawable/football_field"
-                android:layout_width="162dp"
-                android:layout_height="227dp" android:id="@+id/left_field_image"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.132"
-                app:layout_constraintVertical_bias="0.615"/>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="163dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/find_players_left" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.13"
-                app:layout_constraintVertical_bias="0.62">
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_5th_left">
-                <ImageButton
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton1"
-                        android:layout_weight="1" android:background="#00FFFFFF" android:onClick="changeImage"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton2"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_4rd_left">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton3" android:layout_weight="1"
-                        android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton4" android:layout_weight="1"
-                        android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton5" android:layout_weight="1"
-                        android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_3rd_left">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton6"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton7"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_2nd_left">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton8" android:layout_weight="1"
-                        android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton9" android:layout_weight="1"
-                        android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton10" android:layout_weight="1"
-                        android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_1st_left">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp" android:id="@+id/findImageButton11"
-                        android:layout_weight="1"
-                        android:background="#00FFFFFF"/>
-            </LinearLayout>
-        </LinearLayout>
-        <ImageView
-                android:src="@drawable/football_field"
-                android:layout_width="162dp"
-                android:layout_height="227dp" android:id="@+id/right_field_image"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.879" app:layout_constraintVertical_bias="0.615"
-                android:background="#00FFFFFF"/>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="163dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/find_players_right" android:layout_weight="0"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.62"
-                >
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_5th_right">
-                <ImageButton
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton12"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton13"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_4th_right">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton14"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton15"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton16"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_3rd_right">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton17"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton18"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_2nd_right">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton19"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/plus_sign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton20"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp" android:id="@+id/findImageButton21"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/find_LL_1st_right">
-                <ImageButton
-                        android:src="@drawable/user_icon"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp" android:id="@+id/findImageButton22"
-                        android:layout_weight="1" android:background="#00FFFFFF"/>
-            </LinearLayout>
-        </LinearLayout>
-        <ImageView
-                android:src="@drawable/separator"
-                android:layout_width="wrap_content"
-                android:layout_height="247dp" android:id="@+id/separator"
-                app:layout_constraintStart_toEndOf="@+id/left_field_image" app:layout_constraintHorizontal_bias="0.434"
-                app:layout_constraintEnd_toStartOf="@+id/right_field_image"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.615"/>
-        <Button
-                android:text="Back"
-                android:layout_width="160dp"
-                android:layout_height="60dp" android:id="@+id/back_from_find_dtl_btn"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.136" app:layout_constraintVertical_bias="0.932"
-                android:backgroundTint="#37A82A" android:textSize="16sp"/>
-        <Button
-                android:text="Join"
-                android:layout_width="160dp"
-                android:layout_height="60dp" android:id="@+id/join_btn_dtl"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"
-                android:backgroundTint="#37A82A" android:textSize="16sp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <include layout="@layout/menu"></include>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

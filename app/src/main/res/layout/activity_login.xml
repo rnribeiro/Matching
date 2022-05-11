@@ -6,6 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity" android:clickable="false">
+
+    <include layout="@layout/menu" android:visibility="gone"></include>
     <ImageView
             android:layout_width="319dp"
             android:layout_height="82dp" app:srcCompat="@drawable/logo" android:id="@+id/logo_img"

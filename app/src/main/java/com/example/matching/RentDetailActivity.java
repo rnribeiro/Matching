@@ -5,6 +5,9 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RentDetailActivity extends AppCompatActivity {
@@ -15,7 +18,7 @@ public class RentDetailActivity extends AppCompatActivity {
     ImageView left_field, right_field;
     ImageButton ibtn1, ibtn2, ibtn3, ibtn4, ibtn5, ibtn6, ibtn7, ibtn8, ibtn9, ibtn10, ibtn11, ibtn12, ibtn13, ibtn14, ibtn15, ibtn16, ibtn17, ibtn18, ibtn19, ibtn20, ibtn21, ibtn22;
     Boolean bbtn1= false; Boolean bbtn2= false; Boolean bbtn3= false; Boolean bbtn4= false; Boolean bbtn5= false; Boolean bbtn6= false; Boolean bbtn7= false; Boolean bbtn8= false; Boolean bbtn9= false; Boolean bbtn10= false; Boolean bbtn11= false; Boolean bbtn12= false; Boolean bbtn13= false; Boolean bbtn14= false; Boolean bbtn15= false; Boolean bbtn16= false; Boolean bbtn17= false; Boolean bbtn18= false; Boolean bbtn19= false; Boolean bbtn20= false; Boolean bbtn21= false; Boolean bbtn22 = false;
-
+    ConstraintLayout pay_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,113 @@ public class RentDetailActivity extends AppCompatActivity {
 
         setOnClickListeners();
 
+        setUpMenu();
+
+    }
+
+    private void setUpMenu() {
+        ImageButton menu_icon_btn = findViewById(R.id.menu_icon_btn);
+
+        CardView menuCardView = findViewById(R.id.menuCardView);
+        menu_icon_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menuCardView.setVisibility(v.VISIBLE);
+                menuCardView.bringToFront();
+            }
+        });
+
+        ImageButton hide_menu_icon_btn = findViewById(R.id.hide_menu_icon_btn);
+
+        hide_menu_icon_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
+            }
+        });
+
+        Button button_rent = findViewById(R.id.button_rent);
+        button_rent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                go_to_login.putExtra("Type", "Rent");
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_join = findViewById(R.id.button_join);
+        button_join.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                go_to_login.putExtra("Type", "Find");
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_tournaments = findViewById(R.id.button_tournaments);
+        button_tournaments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                go_to_login.putExtra("Type", "Tournament");
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+
+        Button button_Friends = findViewById(R.id.button_Friends);
+        button_Friends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), FriendsActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_account = findViewById(R.id.button_account);
+        button_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        Button button_logout = findViewById(R.id.button_logout);
+        button_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), LoginActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        FloatingActionButton button_configuration = findViewById(R.id.button_configuration);
+        button_configuration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
+            }
+        });
+
+
 
 
     }
@@ -35,7 +145,7 @@ public class RentDetailActivity extends AppCompatActivity {
     private void initializeWidgets() {
         back_from_rent_dtl_btn = findViewById(R.id.back_from_rent_dtl_btn);
         rent_btn_dtl = findViewById(R.id.rent_btn_dtl);
-
+        pay_layout = findViewById(R.id.pay_layout);
         rent_LL_1st_left = findViewById(R.id.rent_LL_1st_left);
         rent_LL_2nd_left = findViewById(R.id.rent_LL_2nd_left);
         rent_LL_3rd_left = findViewById(R.id.rent_LL_3rd_left);
@@ -142,6 +252,43 @@ public class RentDetailActivity extends AppCompatActivity {
     }
 
     private void setOnClickListeners() {
+
+        Button cancel_pay_btn = findViewById(R.id.cancel_pay_btn);
+        Button pay_in_person_btn, paypal_btn;
+
+        pay_in_person_btn=findViewById(R.id.pay_in_person_btn);
+        paypal_btn=findViewById(R.id.paypal_btn);
+
+
+        paypal_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent confirm_rent = new Intent(getApplicationContext(), Successful.class);
+                confirm_rent.putExtra("type", "Rent");
+                confirm_rent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(confirm_rent);
+                overridePendingTransition(0, 0);
+            }
+        });
+
+        pay_in_person_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent confirm_rent = new Intent(getApplicationContext(), Successful.class);
+                confirm_rent.putExtra("type", "Rent");
+                confirm_rent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(confirm_rent);
+                overridePendingTransition(0, 0);
+            }
+        });
+
+
+        cancel_pay_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         back_from_rent_dtl_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -152,11 +299,7 @@ public class RentDetailActivity extends AppCompatActivity {
         rent_btn_dtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent confirm_rent = new Intent(getApplicationContext(), Successful.class);
-                confirm_rent.putExtra("type", "Rent");
-                confirm_rent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(confirm_rent);
-                overridePendingTransition(0, 0);
+                    pay_layout.setVisibility(v.VISIBLE);
             }
         });
 

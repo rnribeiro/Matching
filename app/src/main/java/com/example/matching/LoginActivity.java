@@ -3,8 +3,10 @@ package com.example.matching;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.cardview.widget.CardView;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent do_login = new Intent(getApplicationContext(), MatchActivity.class);
                 do_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                do_login.putExtra("Type", "Rent");
                 startActivity(do_login);
                 overridePendingTransition(0,0);
             }
@@ -35,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
                 overridePendingTransition(0,0);
             }
         });
+
+
 
     }
 }

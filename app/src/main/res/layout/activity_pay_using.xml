@@ -6,22 +6,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".PayUsing"
-        android:background="#C0C0C0">
+        android:background="#C0C0C0" android:id="@+id/pay_layout">
 
     <Button
-            android:text="OK"
+            android:text="Cancel"
             android:layout_width="125dp"
             android:layout_height="55dp"
-            android:id="@+id/ok_pay_btn"
-            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/cancel_pay_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintVertical_bias="0.87"
             android:backgroundTint="#37A82A"
-            android:textSize="19sp"/>
-
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.88"/>
     <TextView
             android:text="Pay using"
             android:layout_width="wrap_content"
@@ -32,26 +29,25 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.102"/>
-
+            app:layout_constraintVertical_bias="0.154"/>
     <Button
             android:text="Paypal"
             android:drawableLeft="@drawable/ic_icons8_paypal"
-            android:layout_width="355dp"
-            android:layout_height="156dp"
+            android:layout_width="290dp"
+            android:layout_height="120dp"
             android:id="@+id/paypal_btn"
             android:backgroundTint="#37A82A"
             android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.351"/>
-
+            app:layout_constraintVertical_bias="0.74" android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/pay_in_person_btn"
+            app:layout_constraintTop_toBottomOf="@+id/pay_textview" android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"/>
     <Button
             android:text="In person"
-            android:layout_width="355dp"
-            android:layout_height="156dp"
+            android:layout_width="290dp"
+            android:layout_height="120dp"
             android:id="@+id/pay_in_person_btn"
             android:backgroundTint="#37A82A"
             android:textSize="25sp"
@@ -59,6 +55,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.657" android:textAllCaps="false"/>
+            app:layout_constraintVertical_bias="0.657" android:textAllCaps="false" android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
