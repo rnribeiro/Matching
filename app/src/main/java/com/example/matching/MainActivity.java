@@ -25,6 +25,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button go_to_register_btn = findViewById(R.id.go_to_register_btn);
+
+        go_to_register_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go_to_register = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                go_to_register.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(go_to_register);
+                overridePendingTransition(0,0);
+            }
+        });
+
 
 
     }
