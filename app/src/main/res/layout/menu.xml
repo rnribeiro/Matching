@@ -79,7 +79,7 @@
                         android:textAlignment="center"
                         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.18" android:textSize="18sp"/>
+                        app:layout_constraintVertical_bias="0.18" android:textSize="18sp" app:cornerRadius="20dp"/>
                 <Button
                         android:id="@+id/button_join"
                         android:layout_width="210dp"
@@ -89,7 +89,7 @@
                         android:textAlignment="center"
                         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.28" android:textSize="18sp"/>
+                        app:layout_constraintVertical_bias="0.28" android:textSize="18sp" app:cornerRadius="20dp"/>
                 <Button
                         android:id="@+id/button_tournaments"
                         android:layout_width="210dp"
@@ -99,7 +99,7 @@
                         android:textAlignment="center"
                         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.38" android:textSize="18sp"/>
+                        app:layout_constraintVertical_bias="0.38" android:textSize="18sp" app:cornerRadius="20dp"/>
                 <Button
                         android:id="@+id/button_Friends"
                         android:layout_width="210dp"
@@ -109,7 +109,7 @@
                         android:textAlignment="center"
                         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.48" android:textSize="18sp"/>
+                        app:layout_constraintVertical_bias="0.48" android:textSize="18sp" app:cornerRadius="20dp"/>
 
                 <Button
                         android:id="@+id/button_account"
@@ -120,7 +120,7 @@
                         android:textAlignment="center"
                         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.58" android:textSize="18sp"/>
+                        app:layout_constraintVertical_bias="0.58" android:textSize="18sp" app:cornerRadius="20dp"/>
 
                 <Button
                         android:id="@+id/button_logout"

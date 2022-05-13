@@ -268,7 +268,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.136" app:layout_constraintVertical_bias="0.932"
-                    android:backgroundTint="#37A82A"/>
+                    android:backgroundTint="#37A82A" app:cornerRadius="20dp"/>
             <Button
                     android:text="Rent"
                     android:layout_width="160dp"
@@ -276,7 +276,7 @@
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"
-                    android:backgroundTint="#37A82A"/>
+                    android:backgroundTint="#37A82A" app:cornerRadius="20dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <include layout="@layout/menu" android:id="@+id/pay_pop_up"></include>
         <include layout="@layout/activity_pay_using" android:layout_width="350dp"

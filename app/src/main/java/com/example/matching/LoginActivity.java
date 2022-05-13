@@ -27,17 +27,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        Button go_to_friends = findViewById(R.id.go_to_friends);
 
-        go_to_friends.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go_to_friends = new Intent(getApplicationContext(), FriendsActivity.class);
-                go_to_friends.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(go_to_friends);
-                overridePendingTransition(0,0);
-            }
-        });
 
 
 
