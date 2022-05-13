@@ -153,13 +153,13 @@ public class FriendsActivity extends AppCompatActivity {
     }
 
     private void createUsers(){
-        User user1 = new User("Jon Doe", R.drawable.person);
-        User user2 = new User("Jane Doe", R.drawable.person);
-        User user3 = new User("Jack Knife", R.drawable.person);
-        User user4 = new User("Jane Knife", R.drawable.person);
-        User user5 = new User("Justin Bieber", R.drawable.person);
-        User user6 = new User("Hanna Montana", R.drawable.person);
-        User user7 = new User("Fredy Mercury", R.drawable.person);
+        User user1 = new User("Percy Arnold", R.drawable.person);
+        User user2 = new User("Jodie Costa", R.drawable.person);
+        User user3 = new User("Arizona Mcguire", R.drawable.person);
+        User user4 = new User("Louis Cox", R.drawable.person);
+        User user5 = new User("Taylor Shepard", R.drawable.person);
+        User user6 = new User("Willie Edwards", R.drawable.person);
+        User user7 = new User("Buck Beasley", R.drawable.person);
 
     }
 }

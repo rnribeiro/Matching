@@ -67,7 +67,8 @@
                         android:layout_gravity="end"
                         android:layout_marginEnd="5dp"
                         android:text="Filter"
-                        android:textSize="22sp" android:backgroundTint="#37A82A" app:cornerRadius="20dp"/>
+                        android:textSize="22sp" android:backgroundTint="#37A82A" app:cornerRadius="20dp"
+                        android:layout_marginRight="10dp" android:layout_marginTop="5dp"/>
                 <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -75,7 +76,12 @@
                     <ListView
                             android:layout_width="wrap_content"
                             android:layout_height="537dp"
-                            android:id="@+id/fieldsListView">
+                            android:id="@+id/fieldsListView"
+                            android:dividerHeight="12dp"
+                            android:divider="@null"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp" >
 
                     </ListView>
                     <androidx.cardview.widget.CardView

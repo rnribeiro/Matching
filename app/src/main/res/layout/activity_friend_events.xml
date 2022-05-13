@@ -22,6 +22,16 @@
                                                            app:layout_constraintStart_toStartOf="parent"
                                                            android:layout_alignParentBottom="true">
 
+
+            <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" android:id="@+id/eventsListView"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="10dp" android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toTopOf="@id/close_button_friend_events"
+                    app:layout_constraintTop_toBottomOf="@id/events_textview"
+                    android:dividerHeight="12dp"
+                    android:divider="@null"/>
             <Button
                     android:text="Close"
                     android:layout_width="125dp"
@@ -47,71 +57,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintHorizontal_bias="0.494"
-                    app:layout_constraintVertical_bias="0.08"/>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:id="@+id/relativeLayout"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintVertical_bias="0.21">
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cell_field_name"
-                        android:gravity="center_vertical"
-                        android:text="Field Name"
-                        android:textSize="20dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.783"
-                        app:layout_constraintVertical_bias="0.155"/>
-
-                <ImageView
-                        android:id="@+id/cell_field_image"
-                        android:layout_width="129dp"
-                        android:layout_height="95dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintHorizontal_bias="0.113"
-                        app:layout_constraintVertical_bias="0.428"
-                        app:srcCompat="@drawable/logo"/>
-
-                <TextView
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/time_cell_text"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.504"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.747"
-                        android:textAlignment="center"/>
-
-                <TextView
-                        android:text="Location: "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/location_cell_text"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.828"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.754"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintVertical_bias="0.04000002"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <include layout="@layout/menu"></include>

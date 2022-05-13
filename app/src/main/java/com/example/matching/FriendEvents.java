@@ -4,18 +4,21 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class FriendEvents extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class FriendEvents extends AppCompatActivity {
+    public static ArrayList<Field> eventsList = new ArrayList<Field>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friend_events);
-
+        createFields();
         Button close_button_friend_events = findViewById(R.id.close_button_friend_events);
         close_button_friend_events.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +29,23 @@ public class FriendEvents extends AppCompatActivity {
 
         setUpMenu();
 
+
+
+        ListView eventsListView = (ListView) findViewById(R.id.eventsListView);
+        FieldAdapter adapter = new FieldAdapter(getApplicationContext(), 0, eventsList);
+        eventsListView.setAdapter(adapter);
+
+    }
+    private void createFields() {
+        Field field1 = new Field("Football field", R.drawable.campo_futebol_campo_pequeno, "Lisbon", "Football", "Rent", 22, 22, true);
+        addToLists(field1);
+        Field field2 = new Field("Basketball Porto", R.drawable.campo_basket_porto, "Porto", "Basketball", "Find", 10, 22, true);
+        addToLists(field2);
+
+
+    }
+    private void addToLists(Field field) {
+        eventsList.add(field);
     }
 
     private void setUpMenu() {

@@ -27,8 +27,8 @@ public class MatchActivity extends AppCompatActivity {
     private CardView filterCardView;
     boolean filterHidden = true;
     private Button filterButton, allButtonFilter, footballButtonFilter, basketballButtonFilter, tennisButtonFilter, locationFilterButton;
+
     private ArrayList<String> selectedFilters = new ArrayList<String>();
-    private String selectedLocation;
 
     private TabLayout tabs;
     private String current_matching_type;
@@ -203,17 +203,17 @@ public class MatchActivity extends AppCompatActivity {
     }
 
     private void createFields() {
-        Field field1 = new Field("Futebol field", R.drawable.campo_futebol_campo_pequeno, "Lisbon", "Football", "Rent", 22, 22, true);
+        Field field1 = new Field("Football field", R.drawable.campo_futebol_campo_pequeno, "Lisbon", "Football", "Rent", 22, 22, true);
         addToLists(field1);
-        Field field2 = new Field("basket faro", R.drawable.campo_basket_porto, "Porto", "Basketball", "Find", 10, 22, true);
+        Field field2 = new Field("Basketball Porto", R.drawable.campo_basket_porto, "Porto", "Basketball", "Find", 10, 22, true);
         addToLists(field2);
-        Field field3 = new Field("Ténis/Padel Faro", R.drawable.campo_tenis_faro, "Faro", "Tennis", "Rent", 2, 2, true);
+        Field field3 = new Field("Tennis/Padel Faro", R.drawable.campo_tenis_faro, "Faro", "Tennis", "Rent", 2, 2, true);
         addToLists(field3);
         Field field4 = new Field("433 Footbar", R.drawable.campo_futebil_lisboa, "Lisbon","Football", "Tournament", 22, 22, true);
         addToLists(field4);
-        Field field5 = new Field("Ténis Vila Galé", R.drawable.campo_tenis_beja, "Beja","Tennis", "Rent", 4, 4, true);
+        Field field5 = new Field("Tennis Vila Galé", R.drawable.campo_tenis_beja, "Beja","Tennis", "Rent", 4, 4, true);
         addToLists(field5);
-        Field field6 = new Field("basket Choupal", R.drawable.campo_basket_coimbra1, "Coimbra","Basketball", "Tournament", 10, 22, true);
+        Field field6 = new Field("Basket Choupal", R.drawable.campo_basket_coimbra1, "Coimbra","Basketball", "Tournament", 10, 22, true);
         addToLists(field6);
         Field field7 = new Field("Street Basket 1", R.drawable.campo_basket_coimbra2, "Coimbra","Basketball", "Rent", 10, 22, true);
         addToLists(field7);
@@ -261,6 +261,16 @@ public class MatchActivity extends AppCompatActivity {
     }
 
     private void setUpOnclickListener() {
+
+        locationFilterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent do_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
+                do_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(do_login);
+                overridePendingTransition(0,0);
+            }
+        });
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -367,6 +377,7 @@ public class MatchActivity extends AppCompatActivity {
                     lookUnSelected(allButtonFilter);
                     filterList("basketball",basketballButtonFilter);
 
+
             }
         });
         tennisButtonFilter.setOnClickListener(new View.OnClickListener() {
@@ -380,12 +391,6 @@ public class MatchActivity extends AppCompatActivity {
             }
         });
 
-        locationFilterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
     }
 
@@ -416,7 +421,7 @@ public class MatchActivity extends AppCompatActivity {
             lookUnSelected(bt);
             filter();
 
-            if (selectedFilters.isEmpty()) {
+            if (selectedFilters.size()==0) {
                 lookSelected(allButtonFilter);
 
                 switch (current_matching_type) {

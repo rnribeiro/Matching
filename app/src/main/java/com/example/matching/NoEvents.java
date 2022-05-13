@@ -33,14 +33,11 @@ public class NoEvents extends AppCompatActivity {
         add_events_float_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent add_events = new Intent(getApplicationContext(), MatchActivity.class);
-//                add_events.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-//                startActivity(add_events);
-//                overridePendingTransition(0, 0);
-
-
-
-
+                Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
+                go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                go_to_login.putExtra("Type", "Rent");
+                startActivity(go_to_login);
+                overridePendingTransition(0,0);
             }
         });
         setUpMenu();
