@@ -203,19 +203,19 @@ public class MatchActivity extends AppCompatActivity {
     }
 
     private void createFields() {
-        Field field1 = new Field("Field A", R.drawable.logo, "Lisbon", "Football", "Rent", 22, 22, true);
+        Field field1 = new Field("Futebol field", R.drawable.campo_futebol_campo_pequeno, "Lisbon", "Football", "Rent", 22, 22, true);
         addToLists(field1);
-        Field field2 = new Field("Field B", R.drawable.logo, "Porto", "Basketball", "Find", 10, 22, true);
+        Field field2 = new Field("basket faro", R.drawable.campo_basket_porto, "Porto", "Basketball", "Find", 10, 22, true);
         addToLists(field2);
-        Field field3 = new Field("Field C", R.drawable.logo, "Faro", "Tennis", "Rent", 2, 2, true);
+        Field field3 = new Field("Ténis/Padel Faro", R.drawable.campo_tenis_faro, "Faro", "Tennis", "Rent", 2, 2, true);
         addToLists(field3);
-        Field field4 = new Field("Field D", R.drawable.logo, "Lisbon","Football", "Tournament", 22, 22, true);
+        Field field4 = new Field("433 Footbar", R.drawable.campo_futebil_lisboa, "Lisbon","Football", "Tournament", 22, 22, true);
         addToLists(field4);
-        Field field5 = new Field("Field E", R.drawable.logo, "Beja","Tennis", "Rent", 4, 4, true);
+        Field field5 = new Field("Ténis Vila Galé", R.drawable.campo_tenis_beja, "Beja","Tennis", "Rent", 4, 4, true);
         addToLists(field5);
-        Field field6 = new Field("Field F", R.drawable.logo, "Coimbra","Basketball", "Tournament", 10, 22, true);
+        Field field6 = new Field("basket Choupal", R.drawable.campo_basket_coimbra1, "Coimbra","Basketball", "Tournament", 10, 22, true);
         addToLists(field6);
-        Field field7 = new Field("Field G", R.drawable.logo, "Coimbra","Basketball", "Rent", 10, 22, true);
+        Field field7 = new Field("Street Basket 1", R.drawable.campo_basket_coimbra2, "Coimbra","Basketball", "Rent", 10, 22, true);
         addToLists(field7);
 
     }
