@@ -8,7 +8,6 @@ import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 public class RentDetailActivity extends AppCompatActivity {
     Field selectedField;
@@ -60,6 +59,7 @@ public class RentDetailActivity extends AppCompatActivity {
         button_rent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 go_to_login.putExtra("Type", "Rent");
@@ -72,6 +72,7 @@ public class RentDetailActivity extends AppCompatActivity {
         button_join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 go_to_login.putExtra("Type", "Find");
@@ -84,6 +85,7 @@ public class RentDetailActivity extends AppCompatActivity {
         button_tournaments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 go_to_login.putExtra("Type", "Tournament");
@@ -97,6 +99,7 @@ public class RentDetailActivity extends AppCompatActivity {
         button_Friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), FriendsActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);
@@ -108,6 +111,7 @@ public class RentDetailActivity extends AppCompatActivity {
         button_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);
@@ -119,7 +123,8 @@ public class RentDetailActivity extends AppCompatActivity {
         button_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent go_to_login = new Intent(getApplicationContext(), LoginActivity.class);
+                menuCardView.setVisibility(v.GONE);
+                Intent go_to_login = new Intent(getApplicationContext(), MainActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);
                 overridePendingTransition(0,0);
@@ -130,6 +135,7 @@ public class RentDetailActivity extends AppCompatActivity {
         button_configuration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);

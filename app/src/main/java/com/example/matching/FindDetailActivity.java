@@ -90,11 +90,13 @@ public class FindDetailActivity extends AppCompatActivity {
         button_rent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 go_to_login.putExtra("Type", "Rent");
                 startActivity(go_to_login);
                 overridePendingTransition(0,0);
+
             }
         });
 
@@ -102,6 +104,7 @@ public class FindDetailActivity extends AppCompatActivity {
         button_join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 go_to_login.putExtra("Type", "Find");
@@ -114,6 +117,7 @@ public class FindDetailActivity extends AppCompatActivity {
         button_tournaments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), MatchActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 go_to_login.putExtra("Type", "Tournament");
@@ -127,6 +131,7 @@ public class FindDetailActivity extends AppCompatActivity {
         button_Friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), FriendsActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);
@@ -138,6 +143,7 @@ public class FindDetailActivity extends AppCompatActivity {
         button_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);
@@ -149,7 +155,8 @@ public class FindDetailActivity extends AppCompatActivity {
         button_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent go_to_login = new Intent(getApplicationContext(), LoginActivity.class);
+                menuCardView.setVisibility(v.GONE);
+                Intent go_to_login = new Intent(getApplicationContext(), MainActivity.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);
                 overridePendingTransition(0,0);
@@ -160,6 +167,7 @@ public class FindDetailActivity extends AppCompatActivity {
         button_configuration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menuCardView.setVisibility(v.GONE);
                 Intent go_to_login = new Intent(getApplicationContext(), FunctionalityNotImplemented.class);
                 go_to_login.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(go_to_login);
@@ -479,7 +487,8 @@ public class FindDetailActivity extends AppCompatActivity {
     private void getSelectedField() {
         Intent previousIntent = getIntent();
         int parsedStringID = previousIntent.getIntExtra("id", 0);
-        selectedField = MatchActivity.FieldList.get(parsedStringID);
+        selectedField =MatchActivity.FieldList.get(parsedStringID);
+
     }
 
     private void setValues() {
@@ -493,7 +502,6 @@ public class FindDetailActivity extends AppCompatActivity {
         find_dtl_field_image.setImageResource(selectedField.getImage());
         find_dtl_time_text_view.setText("Time: 18:00 - 19:00");
         find_dtl_location_text_view.setText(selectedField.getLocation());
-
 
     }
 }
