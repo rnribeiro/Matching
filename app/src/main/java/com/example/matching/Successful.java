@@ -35,6 +35,7 @@ public class Successful extends AppCompatActivity {
             public void onClick(View v) {
                 Intent success = new Intent(getApplicationContext(), MatchActivity.class);
                 success.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                success.putExtra("Type", "Rent");
                 startActivity(success);
                 overridePendingTransition(0,0);
             }
