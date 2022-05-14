@@ -25,11 +25,11 @@ public class FunctionalityNotImplemented extends AppCompatActivity {
             }
         });
 
-        setUpMenu();
+//        setUpMenu();
 
     }
 
-    private void setUpMenu() {
+/*    private void setUpMenu() {
         ImageButton menu_icon_btn = findViewById(R.id.menu_icon_btn);
 
         CardView menuCardView = findViewById(R.id.menuCardView);
@@ -141,5 +141,5 @@ public class FunctionalityNotImplemented extends AppCompatActivity {
 
 
 
-    }
+    }*/
 }

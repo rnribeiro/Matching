@@ -23,16 +23,19 @@
                                                            app:layout_constraintBottom_toBottomOf="parent"
                                                            app:layout_constraintEnd_toEndOf="parent"
                                                            app:layout_constraintStart_toStartOf="parent"
-                                                           android:layout_alignParentBottom="true">
+                                                           android:layout_alignParentBottom="true"
+                                                           android:layout_marginTop="0dp"
+                                                           android:layout_below="@+id/menu_pop_up">
 
             <com.google.android.material.tabs.TabLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintVertical_bias="0.125" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:id="@+id/tabLayout"
                     app:tabIndicatorColor="#37A82A"
-                    app:tabSelectedTextColor="#1C5716">
+                    app:tabSelectedTextColor="#1C5716" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" android:layout_marginTop="5dp">
 
                 <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
@@ -50,14 +53,15 @@
                         android:text="Tournament" android:id="@+id/tournament_tab"/>
             </com.google.android.material.tabs.TabLayout>
             <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="414dp"
+                    android:layout_height="0dp"
                     tools:context=".MainActivity"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0" app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0">
+                    app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="1.0"
+                    android:layout_marginTop="8dp">
 
 
                 <Button
@@ -71,17 +75,17 @@
                         android:layout_marginRight="10dp" android:layout_marginTop="5dp"/>
                 <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent" android:layout_marginBottom="0dp">
 
                     <ListView
                             android:layout_width="wrap_content"
-                            android:layout_height="537dp"
+                            android:layout_height="match_parent"
                             android:id="@+id/fieldsListView"
                             android:dividerHeight="12dp"
                             android:divider="@null"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginTop="5dp" >
+                            android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
 
                     </ListView>
                     <androidx.cardview.widget.CardView
@@ -186,10 +190,8 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <include layout="@layout/menu"></include>
+        <include layout="@layout/menu" android:id="@+id/menu_pop_up"></include>
     </RelativeLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

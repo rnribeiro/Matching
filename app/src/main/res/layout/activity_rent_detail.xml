@@ -16,11 +16,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="641dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" android:id="@+id/rent_details_layout"
-                android:layout_alignParentBottom="true">
+                android:layout_alignParentBottom="true" android:layout_marginTop="0dp"
+                android:layout_below="@+id/pay_pop_up">
 
             <ImageView
                     android:id="@+id/rent_dtl_field_image"
@@ -30,15 +31,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.06"
-                    android:clickable="false" android:layout_marginTop="24dp"/>
+                    app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.050000012"
+                    android:clickable="false"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="174dp"
                     android:layout_height="123dp" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.898"
-                    app:layout_constraintVertical_bias="0.059" android:gravity="center" android:id="@+id/linearLayout"
-                    android:layout_marginTop="24dp">
+                    app:layout_constraintVertical_bias="0.050000012" android:gravity="center"
+                    android:id="@+id/linearLayout"
+            >
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -57,7 +59,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.52"
-                        />
+                />
                 <TextView
                         android:text="Location"
                         android:layout_width="wrap_content"
@@ -65,7 +67,7 @@
                         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintVertical_bias="0.846" app:layout_constraintTop_toTopOf="parent"
-                        />
+                />
             </androidx.constraintlayout.widget.ConstraintLayout>
             <ImageView
                     android:src="@drawable/football_field"
@@ -74,7 +76,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.132"
-                    app:layout_constraintVertical_bias="0.615"/>
+                    app:layout_constraintVertical_bias="0.55"/>
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="163dp"
@@ -82,10 +84,11 @@
                     android:id="@+id/rent_players_left" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.13"
-                    app:layout_constraintVertical_bias="0.62">
+                    app:layout_constraintVertical_bias="0.55">
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_5th_left">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_5th_left">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="wrap_content"
@@ -99,7 +102,8 @@
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_4rd_left">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_4rd_left">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="wrap_content"
@@ -118,7 +122,8 @@
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_3rd_left">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_3rd_left">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="wrap_content"
@@ -132,7 +137,8 @@
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_2nd_left">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_2nd_left">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="wrap_content"
@@ -152,7 +158,8 @@
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_1st_left">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_1st_left">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:background="#00FFFFFF"
@@ -168,7 +175,7 @@
                     android:layout_height="227dp" android:id="@+id/right_field_image"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintHorizontal_bias="0.879" app:layout_constraintVertical_bias="0.615"/>
+                    app:layout_constraintHorizontal_bias="0.879" app:layout_constraintVertical_bias="0.55"/>
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="163dp"
@@ -176,10 +183,11 @@
                     android:id="@+id/rent_players_right" android:layout_weight="0"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.62">
+                    app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.55">
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_5th_right">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_5th_right">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="wrap_content"
@@ -193,7 +201,8 @@
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_4th_right">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_4th_right">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="wrap_content"
@@ -212,7 +221,8 @@
                 </LinearLayout>
                 <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_3rd_right">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_3rd_right">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="wrap_content"
@@ -247,7 +257,8 @@
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_weight="0" android:id="@+id/rent_LL_1st_right">
+                        android:layout_height="wrap_content" android:layout_weight="0"
+                        android:id="@+id/rent_LL_1st_right">
                     <ImageButton
                             android:src="@drawable/plus_sign"
                             android:layout_width="0dp"
@@ -259,10 +270,11 @@
                     android:src="@drawable/separator"
                     android:layout_width="wrap_content"
                     android:layout_height="247dp" android:id="@+id/separator"
-                    app:layout_constraintStart_toEndOf="@+id/left_field_image" app:layout_constraintHorizontal_bias="0.434"
+                    app:layout_constraintStart_toEndOf="@+id/left_field_image"
+                    app:layout_constraintHorizontal_bias="0.434"
                     app:layout_constraintEnd_toStartOf="@+id/right_field_image"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.615"/>
+                    app:layout_constraintVertical_bias="0.55"/>
             <Button
                     android:text="Back"
                     android:layout_width="160dp"

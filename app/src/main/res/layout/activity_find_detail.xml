@@ -18,11 +18,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="641dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" android:id="@+id/find_details_layout"
-                android:layout_alignParentBottom="true">
+                android:layout_alignParentBottom="true" android:layout_marginTop="0dp"
+                android:layout_below="@+id/menu_pop_up">
 
             <ImageView
                     android:id="@+id/find_dtl_field_image"
@@ -32,14 +33,15 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.08"
+                    app:layout_constraintHorizontal_bias="0.126" app:layout_constraintVertical_bias="0.050000012"
                     android:clickable="false"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="190dp"
                     android:layout_height="123dp" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.898"
-                    app:layout_constraintVertical_bias="0.08" android:gravity="center" android:id="@+id/linearLayout">
+                    app:layout_constraintVertical_bias="0.050000012" android:gravity="center"
+                    android:id="@+id/linearLayout">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,7 +75,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.132"
-                    app:layout_constraintVertical_bias="0.615"/>
+                    app:layout_constraintVertical_bias="0.55"/>
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="163dp"
@@ -81,7 +83,7 @@
                     android:id="@+id/find_players_left" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.13"
-                    app:layout_constraintVertical_bias="0.62">
+                    app:layout_constraintVertical_bias="0.56">
                 <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/find_LL_5th_left">
@@ -166,7 +168,7 @@
                     android:layout_height="227dp" android:id="@+id/right_field_image"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintHorizontal_bias="0.879" app:layout_constraintVertical_bias="0.615"
+                    app:layout_constraintHorizontal_bias="0.879" app:layout_constraintVertical_bias="0.55"
                     android:background="#00FFFFFF"/>
             <LinearLayout
                     android:orientation="vertical"
@@ -175,7 +177,7 @@
                     android:id="@+id/find_players_right" android:layout_weight="0"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.62"
+                    app:layout_constraintHorizontal_bias="0.87" app:layout_constraintVertical_bias="0.56"
             >
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -262,7 +264,7 @@
                     app:layout_constraintHorizontal_bias="0.434"
                     app:layout_constraintEnd_toStartOf="@+id/right_field_image"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.615"/>
+                    app:layout_constraintVertical_bias="0.55"/>
             <Button
                     android:text="Back"
                     android:layout_width="160dp"
@@ -281,7 +283,7 @@
                     app:layout_constraintHorizontal_bias="0.873" app:layout_constraintVertical_bias="0.932"
                     android:backgroundTint="#37A82A" android:textSize="16sp" app:cornerRadius="20dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <include layout="@layout/menu"></include>
+        <include layout="@layout/menu" android:id="@+id/menu_pop_up"></include>
     </RelativeLayout>
 
 

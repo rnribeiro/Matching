@@ -20,7 +20,7 @@ public class Successful extends AppCompatActivity {
         Button ok_success_button = findViewById(R.id.ok_success_button);
         TextView success_textView = findViewById(R.id.success_textview);
         Intent previousIntent = getIntent();
-        setUpMenu();
+//        setUpMenu();
         String type = previousIntent.getStringExtra("type");
 
         if (type.equals("Rent")){
@@ -44,7 +44,7 @@ public class Successful extends AppCompatActivity {
 
     }
 
-    private void setUpMenu() {
+/*    private void setUpMenu() {
         ImageButton menu_icon_btn = findViewById(R.id.menu_icon_btn);
 
         CardView menuCardView = findViewById(R.id.menuCardView);
@@ -156,5 +156,5 @@ public class Successful extends AppCompatActivity {
 
 
 
-    }
+    }*/
 }
