@@ -89,7 +89,6 @@ public class MatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 menuCardView.setVisibility(v.VISIBLE);
-                menuCardView.bringToFront();
             }
         });
 
