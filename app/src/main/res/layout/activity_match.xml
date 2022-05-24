@@ -64,13 +64,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:layout_marginEnd="5dp"
+                        android:layout_marginEnd="15dp"
                         android:text="Filter"
                         android:textSize="22sp" android:backgroundTint="#37A82A" app:cornerRadius="20dp"
                         android:layout_marginRight="10dp" android:layout_marginTop="5dp"/>
                 <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:layout_marginBottom="0dp">
+                        android:layout_height="match_parent" android:layout_marginBottom="0dp"
+                        android:layout_marginRight="10dp" android:layout_marginLeft="10dp">
 
                     <ListView
                             android:layout_width="wrap_content"
@@ -87,7 +88,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" app:cardCornerRadius="10dp"
                             android:layout_alignParentRight="true" android:id="@+id/filterCardView"
-                            android:visibility="gone">
+                            android:layout_marginRight="5dp" android:visibility="gone">
                         <LinearLayout
                                 android:orientation="horizontal"
                                 android:layout_width="wrap_content"
@@ -106,14 +107,15 @@
                                         android:layout_weight="0"
                                         android:layout_height="wrap_content"
                                         android:text="All"
-                                        android:id="@+id/allButtonFilter"/>
+                                        android:id="@+id/allButtonFilter" android:layout_marginRight="8dp"
+                                        android:layout_marginLeft="8dp"/>
                                 <Button
                                         android:layout_width="match_parent"
                                         android:layout_weight="0"
                                         android:layout_height="match_parent"
                                         android:text="Football"
                                         android:id="@+id/footballFilter"
-                                />
+                                        android:layout_marginRight="8dp" android:layout_marginLeft="8dp"/>
 
                                 <Button
                                         android:layout_width="match_parent"
@@ -121,14 +123,14 @@
                                         android:layout_height="wrap_content"
                                         android:text="Basketball"
                                         android:id="@+id/basketballFilter"
-                                />
+                                        android:layout_marginRight="8dp" android:layout_marginLeft="8dp"/>
                                 <Button
                                         android:layout_width="match_parent"
                                         android:layout_weight="0"
                                         android:layout_height="wrap_content"
                                         android:text="Tennis"
                                         android:id="@+id/tennisFilter"
-                                />
+                                        android:layout_marginRight="8dp" android:layout_marginLeft="8dp"/>
 
                             </LinearLayout>
                             <LinearLayout
@@ -176,7 +178,8 @@
                                         android:text="Location"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content" android:id="@+id/locationFilterButton"
-                                        android:gravity="center"/>
+                                        android:gravity="center" android:layout_marginRight="5dp"
+                                        android:layout_marginLeft="5dp"/>
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
